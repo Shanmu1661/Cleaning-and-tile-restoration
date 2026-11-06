@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 72" width="310" height="72" fill="none">
+  <defs>
+    <linearGradient id="c1-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="45%" stop-color="#00b4d8"/>
+      <stop offset="100%" stop-color="#0d9488"/>
+    </linearGradient>
+    <linearGradient id="c1-glow-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#00b4d8" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- Ambient glow backdrop -->
+  <ellipse cx="36" cy="62" rx="28" ry="7" fill="url(#c1-glow-grad)"/>
+  <!-- Tile Grid (4 quadrants representing clean restored ceramic tile) -->
+  <g transform="translate(6, 6)">
+    <!-- Base frame -->
+    <rect x="0" y="0" width="60" height="60" rx="17" fill="#082f49" fill-opacity="0.15" stroke="#0284c7" stroke-width="1.2" stroke-opacity="0.35"/>
+    <!-- 4 Tiles -->
+    <rect x="5" y="5" width="23.5" height="23.5" rx="7" fill="url(#c1-grad)"/>
+    <rect x="31.5" y="5" width="23.5" height="23.5" rx="7" fill="url(#c1-grad)"/>
+    <rect x="5" y="31.5" width="23.5" height="23.5" rx="7" fill="url(#c1-grad)"/>
+    <rect x="31.5" y="31.5" width="23.5" height="23.5" rx="7" fill="url(#c1-grad)"/>
+    <!-- Grout crosshair central dot -->
+    <circle cx="30" cy="30" r="2.2" fill="#38bdf8"/>
+    <!-- Radiant 4-Point Star Sparkle on top-right tile -->
+    <g transform="translate(43, 16)">
+      <path d="M 0 -13 Q 1 -2 12 0 Q 1 2 0 13 Q -1 2 -12 0 Q -1 -2 0 -13 Z" fill="#ffffff"/>
+      <circle cx="0" cy="0" r="2" fill="#bae6fd"/>
+    </g>
+    <!-- Accent glint on bottom-left tile -->
+    <g transform="translate(14, 45) scale(0.4)">
+      <path d="M 0 -10 Q 1 -1 10 0 Q 1 1 0 10 Q -1 1 -10 0 Q -1 -1 0 -10 Z" fill="#ffffff"/>
+    </g>
+  </g>
+  <!-- Brand Typography -->
+  <g font-family="'Plus Jakarta Sans', 'Outfit', system-ui, sans-serif">
+    <text x="82" y="42" font-size="29" font-weight="900" letter-spacing="-0.5">
+      <tspan fill="#0284c7">Aqua</tspan><tspan fill="#0d9488">Gleam</tspan>
+    </text>
+    <text x="83" y="59" font-size="10.5" font-weight="800" fill="#94a3b8" letter-spacing="2.5">TILE &amp; GROUT CARE</text>
+  </g>
+</svg>

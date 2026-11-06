@@ -1,0 +1,907 @@
+/* ==========================================================================
+   AquaGleam - Luxury Spa & High-Tech Porcelain Restoration Design System
+   Version: 2.0.0 - Attractive Luxe Edition
+   Features: Glassmorphism, Ambient Glow Auras, Micro-interactions,
+             Crystalline Shimmer, Luxury Gradient Borders, Responsive Scale.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;700;900&display=swap');
+
+/* --- 1. Master Design Tokens & Color Palette --- */
+:root {
+  /* Radiant Crystalline Aqua & Ocean */
+  --primary: #0284c7;
+  --primary-light: #e0f2fe;
+  --primary-glow: rgba(14, 165, 233, 0.35);
+  --primary-gradient: linear-gradient(135deg, #0284c7 0%, #0ea5e9 50%, #06b6d4 100%);
+  --primary-hover: #0369a1;
+
+  /* Hygiene Spa Teal & Emerald */
+  --secondary: #0d9488;
+  --secondary-light: #ccfbf1;
+  --secondary-glow: rgba(13, 148, 136, 0.3);
+  --secondary-gradient: linear-gradient(135deg, #0d9488 0%, #14b8a6 50%, #10b981 100%);
+
+  /* Champagne Venetian Gold Accent */
+  --accent: #f59e0b;
+  --accent-light: #fef3c7;
+  --accent-glow: rgba(245, 158, 11, 0.4);
+  --accent-gradient: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #fcd34d 100%);
+
+  /* Light Theme Surfaces */
+  --bg-body: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-card: rgba(255, 255, 255, 0.9);
+  --bg-alt: #f1f5f9;
+  --border-color: #e2e8f0;
+  --border-glow: rgba(14, 165, 233, 0.2);
+
+  /* Typography */
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+
+  /* Shadows & Ambient Auras */
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.06);
+  --shadow-md: 0 4px 12px -2px rgb(0 0 0 / 0.08), 0 2px 6px -2px rgb(0 0 0 / 0.04);
+  --shadow-lg: 0 12px 24px -4px rgb(0 0 0 / 0.1), 0 4px 8px -2px rgb(0 0 0 / 0.05);
+  --shadow-xl: 0 24px 48px -12px rgb(0 0 0 / 0.15);
+  --shadow-glow-cyan: 0 10px 30px -5px rgba(14, 165, 233, 0.35);
+  --shadow-glow-gold: 0 10px 30px -5px rgba(245, 158, 11, 0.35);
+
+  /* Border Radii */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-bounce: 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition-smooth: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- 2. Base & Accessibility Defaults --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-body);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -9999px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  z-index: 10000;
+  box-shadow: var(--shadow-xl);
+}
+.skip-link:focus {
+  top: 1rem;
+  outline: 3px solid var(--accent);
+}
+
+/* --- 3. Attractive Glassmorphism & Gradient Utilities --- */
+
+/* Glass Cards with Frosted Blur & Delicate Border */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+}
+
+/* Glowing Gradient Borders */
+.gradient-border-card {
+  position: relative;
+  border-radius: var(--radius-2xl);
+  background: #ffffff;
+  padding: 1px;
+  background-clip: padding-box;
+}
+
+.gradient-border-card::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: calc(var(--radius-2xl) + 2px);
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.6), rgba(13, 148, 136, 0.4), rgba(245, 158, 11, 0.5));
+  z-index: -1;
+  opacity: 0.7;
+  transition: opacity var(--transition-smooth);
+}
+
+.gradient-border-card:hover::before {
+  opacity: 1;
+}
+
+/* Animated Shimmer Text */
+.text-shimmer {
+  background: linear-gradient(90deg, #0284c7 0%, #06b6d4 40%, #10b981 70%, #0284c7 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine-text 5s linear infinite;
+}
+
+@keyframes shine-text {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Ambient Radial Glow Orbs */
+.ambient-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* --- 4. High-End Interactive Buttons --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  padding: 0.85rem 1.75rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: var(--radius-xl);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-smooth);
+  text-decoration: none;
+  min-height: 46px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background: var(--primary-gradient);
+  color: #ffffff;
+  box-shadow: var(--shadow-glow-cyan);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2.5px);
+  box-shadow: 0 14px 28px -5px rgba(14, 165, 233, 0.5);
+  filter: brightness(1.05);
+}
+
+.btn-secondary {
+  background: var(--secondary-gradient);
+  color: #ffffff;
+  box-shadow: 0 8px 24px -4px rgba(13, 148, 136, 0.35);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2.5px);
+  box-shadow: 0 14px 28px -5px rgba(13, 148, 136, 0.45);
+}
+
+.btn-accent {
+  background: var(--accent-gradient);
+  color: #0f172a;
+  box-shadow: var(--shadow-glow-gold);
+  font-weight: 800;
+}
+
+.btn-accent:hover {
+  transform: translateY(-2.5px);
+  box-shadow: 0 14px 28px -5px rgba(245, 158, 11, 0.5);
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: rgba(2, 132, 199, 0.4);
+  color: var(--primary);
+}
+
+.btn-outline:hover {
+  background: rgba(2, 132, 199, 0.08);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.btn-light {
+  background: #ffffff;
+  color: var(--text-main);
+  border-color: var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-light:hover {
+  background: var(--bg-alt);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Subtle Button Shine Reflection Sweep */
+.btn-primary::after,
+.btn-accent::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 25%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.35);
+  transform: rotate(30deg);
+  transition: all 0.6s ease;
+  pointer-events: none;
+}
+
+.btn-primary:hover::after,
+.btn-accent:hover::after {
+  left: 120%;
+}
+
+/* --- 5. Badges & Micro-Pills --- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.3rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.badge-primary {
+  background: rgba(2, 132, 199, 0.12);
+  color: #0369a1;
+  border: 1px solid rgba(2, 132, 199, 0.25);
+}
+
+.badge-secondary {
+  background: rgba(13, 148, 136, 0.12);
+  color: #0f766e;
+  border: 1px solid rgba(13, 148, 136, 0.25);
+}
+
+.badge-accent {
+  background: rgba(245, 158, 11, 0.14);
+  color: #b45309;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+/* Floating Image Overlay Badges - High Visibility & Contrast */
+.absolute.badge,
+.badge.absolute,
+.relative > .badge,
+.relative > span.badge {
+  font-weight: 800 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  font-size: 0.72rem !important;
+  padding: 0.35rem 0.85rem !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
+  border-width: 1px !important;
+}
+
+.absolute.badge-primary,
+.badge-primary.absolute,
+.relative > .badge-primary {
+  background: #0284c7 !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+.absolute.badge-secondary,
+.badge-secondary.absolute,
+.relative > .badge-secondary {
+  background: #0d9488 !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+.absolute.badge-accent,
+.badge-accent.absolute,
+.relative > .badge-accent {
+  background: #d97706 !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+html.dark .absolute.badge-primary,
+html.dark .badge-primary.absolute,
+.dark .relative > .badge-primary {
+  background: #0369a1 !important;
+  color: #ffffff !important;
+  border-color: rgba(56, 189, 248, 0.4) !important;
+}
+
+html.dark .absolute.badge-secondary,
+html.dark .badge-secondary.absolute,
+.dark .relative > .badge-secondary {
+  background: #0f766e !important;
+  color: #ffffff !important;
+  border-color: rgba(45, 212, 191, 0.4) !important;
+}
+
+html.dark .absolute.badge-accent,
+html.dark .badge-accent.absolute,
+.dark .relative > .badge-accent {
+  background: #f59e0b !important;
+  color: #0f172a !important;
+  border-color: rgba(251, 191, 36, 0.5) !important;
+  text-shadow: none !important;
+}
+
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1.1rem;
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.1), rgba(13, 148, 136, 0.1));
+  color: var(--primary);
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.85rem;
+  border: 1px solid rgba(2, 132, 199, 0.22);
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.08);
+}
+
+/* --- 6. Luxury Before / After Comparison Slider --- */
+.before-after-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-xl);
+  user-select: none;
+  touch-action: none;
+  aspect-ratio: 16 / 10;
+  background-color: #0f172a;
+  border: none;
+  --split: 50%;
+}
+
+.before-after-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.before-after-container .img-base {
+  z-index: 1;
+}
+
+.before-after-container .img-after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  overflow: hidden;
+  pointer-events: none;
+  clip-path: inset(0 calc(100% - var(--split, 50%)) 0 0);
+  -webkit-clip-path: inset(0 calc(100% - var(--split, 50%)) 0 0);
+}
+
+.before-after-container .img-after img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.before-after-divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--split, 50%);
+  width: 3px;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 8px var(--primary);
+  z-index: 3;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.before-after-slider {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 0;
+  cursor: ew-resize;
+  margin: 0;
+  padding: 0;
+}
+
+.before-after-handle {
+  position: absolute;
+  top: 50%;
+  left: var(--split, 50%);
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+  border: 3.5px solid var(--primary);
+  border-radius: 50%;
+  z-index: 5;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 16px rgba(14, 165, 233, 0.6);
+  color: var(--primary);
+}
+
+.slider-label {
+  position: absolute;
+  top: 1.25rem;
+  padding: 0.45rem 1rem;
+  background: rgba(15, 23, 42, 0.85);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 4;
+  box-shadow: var(--shadow-md);
+  pointer-events: none;
+}
+
+.slider-label-before {
+  left: 1.25rem;
+  border-color: rgba(244, 63, 94, 0.4);
+}
+
+.slider-label-after {
+  right: 1.25rem;
+  color: #38bdf8;
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+/* --- 7. Interactive Form Elements & Tooltips --- */
+.form-input {
+  width: 100%;
+  padding: 0.95rem 1.15rem;
+  font-size: 0.95rem;
+  border-radius: var(--radius-lg);
+  border: 1.5px solid var(--border-color);
+  background-color: #ffffff;
+  color: var(--text-main);
+  transition: all var(--transition-smooth);
+}
+
+.form-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.15);
+  outline: none;
+  background-color: #ffffff;
+}
+
+.form-group.has-error .form-input {
+  border-color: #ef4444;
+  background-color: #fff5f5;
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.1);
+}
+
+.form-group.has-error .error-text {
+  display: block;
+  color: #ef4444;
+  font-size: 0.8rem;
+  margin-top: 0.4rem;
+  font-weight: 600;
+}
+
+.form-group .error-text {
+  display: none;
+}
+
+.form-group.is-valid .form-input {
+  border-color: #10b981;
+}
+
+/* Custom Styled Range Slider */
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  background: var(--primary-gradient);
+  cursor: pointer;
+  margin-top: -7px;
+  box-shadow: 0 3px 10px rgba(2, 132, 199, 0.5);
+  border: 2.5px solid #ffffff;
+  transition: transform 0.15s ease;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: #e2e8f0;
+  border-radius: var(--radius-full);
+}
+
+/* --- 8. Toast Notifications --- */
+#toast-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  pointer-events: none;
+}
+
+.toast-msg {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1.1rem 1.4rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  color: var(--text-main);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
+  border-left: 5px solid var(--primary);
+  min-width: 320px;
+  max-width: 440px;
+  animation: toast-slide-in 0.35s var(--transition-bounce) forwards;
+}
+
+.toast-msg.toast-success {
+  border-left-color: #10b981;
+}
+
+.toast-msg.toast-danger {
+  border-left-color: #ef4444;
+}
+
+@keyframes toast-slide-in {
+  from {
+    transform: translateY(30px) scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* --- 9. Modal Windows --- */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-smooth);
+}
+
+.modal-backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-dialog {
+  background-color: var(--bg-surface);
+  border-radius: var(--radius-2xl);
+  max-width: 620px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.4);
+  transform: scale(0.92) translateY(15px);
+  transition: transform var(--transition-bounce);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.modal-backdrop.is-open .modal-dialog {
+  transform: scale(1) translateY(0);
+}
+
+/* --- 10. Floating Actions Bar --- */
+.floating-actions {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  z-index: 900;
+}
+
+.floating-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 8px 24px -2px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform var(--transition-bounce), box-shadow var(--transition-smooth);
+  text-decoration: none;
+}
+
+.floating-btn:hover {
+  transform: scale(1.15) translateY(-3px);
+  box-shadow: 0 14px 30px -4px rgba(0, 0, 0, 0.35);
+}
+
+.floating-whatsapp {
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+}
+
+.floating-phone {
+  background: var(--primary-gradient);
+}
+
+.floating-top {
+  background: #0f172a;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-smooth);
+}
+
+.floating-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* --- 11. Subtle Animation Delights --- */
+@keyframes float-subtle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: float-subtle 4s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-subtle 4s ease-in-out 2s infinite;
+}
+
+/* --- 12. Hero High-Contrast Clarity Styles --- */
+.hero-backdrop-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 100%);
+  pointer-events: none;
+}
+
+html.dark .hero-backdrop-overlay,
+[data-theme="dark"] .hero-backdrop-overlay,
+.dark .hero-backdrop-overlay {
+  background: linear-gradient(105deg, rgba(10, 16, 28, 0.65) 0%, rgba(15, 23, 42, 0.50) 50%, rgba(15, 23, 42, 0.35) 100%);
+  pointer-events: none;
+}
+
+.hero-text-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 20px 45px -12px rgba(15, 23, 42, 0.15);
+}
+
+html.dark .hero-text-card,
+[data-theme="dark"] .hero-text-card,
+.dark .hero-text-card {
+  background: rgba(15, 23, 42, 0.90);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 45px -12px rgba(0, 0, 0, 0.6);
+}
+
+.hero-lead-text {
+  color: #0f172a !important;
+  font-weight: 500 !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+html.dark .hero-lead-text,
+[data-theme="dark"] .hero-lead-text,
+.dark .hero-lead-text {
+  color: #f8fafc !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* --- 13. Calculator Result Card (High Contrast Guarantee) --- */
+.calc-result-card {
+  background: linear-gradient(145deg, #082f49 0%, #0f172a 50%, #020617 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 20px 45px -10px rgba(8, 47, 73, 0.4) !important;
+}
+
+.calc-result-card .calc-title-badge {
+  color: #7dd3fc !important;
+  font-weight: 700 !important;
+}
+
+.calc-result-card .calc-price-label {
+  color: #cbd5e1 !important;
+}
+
+.calc-result-card .calc-big-price {
+  color: #ffffff !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.calc-result-card .calc-sub-text {
+  color: #bae6fd !important;
+}
+
+.calc-result-card .calc-meta-label {
+  color: #94a3b8 !important;
+}
+
+.calc-result-card .calc-meta-value {
+  color: #ffffff !important;
+}
+
+.calc-result-card .calc-feature-item {
+  color: #e2e8f0 !important;
+}
+
+/* --- 14. FAQ High-Visibility Background Styles --- */
+.faq-backdrop-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.45);
+  pointer-events: none;
+}
+
+html.dark .faq-backdrop-overlay,
+[data-theme="dark"] .faq-backdrop-overlay,
+.dark .faq-backdrop-overlay {
+  background: rgba(10, 16, 28, 0.68);
+  pointer-events: none;
+}
+
+.faq-card-solid {
+  background: #ffffff !important;
+  border: 1px solid rgba(226, 232, 240, 0.9) !important;
+  box-shadow: 0 10px 30px -8px rgba(15, 23, 42, 0.12) !important;
+}
+
+html.dark .faq-card-solid,
+[data-theme="dark"] .faq-card-solid,
+.dark .faq-card-solid {
+  background: #0f172a !important;
+  border: 1px solid rgba(51, 65, 85, 0.8) !important;
+  box-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* --- 15. Workflow High-Visibility Background Styles --- */
+.workflow-backdrop-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.40);
+  pointer-events: none;
+}
+
+html.dark .workflow-backdrop-overlay,
+[data-theme="dark"] .workflow-backdrop-overlay,
+.dark .workflow-backdrop-overlay {
+  background: rgba(10, 16, 28, 0.65);
+  pointer-events: none;
+}
+
+.workflow-card-solid {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(226, 232, 240, 0.9) !important;
+  box-shadow: 0 15px 35px -5px rgba(15, 23, 42, 0.12) !important;
+}
+
+html.dark .workflow-card-solid,
+[data-theme="dark"] .workflow-card-solid,
+.dark .workflow-card-solid {
+  background: rgba(15, 23, 42, 0.92) !important;
+  border: 1px solid rgba(51, 65, 85, 0.8) !important;
+  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* --- 16. Stone Matrix High-Visibility Background Styles --- */
+.matrix-backdrop-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.40);
+  pointer-events: none;
+}
+
+html.dark .matrix-backdrop-overlay,
+[data-theme="dark"] .matrix-backdrop-overlay,
+.dark .matrix-backdrop-overlay {
+  background: rgba(10, 16, 28, 0.65);
+  pointer-events: none;
+}
+
+.matrix-card-solid {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(226, 232, 240, 0.9) !important;
+  box-shadow: 0 15px 35px -5px rgba(15, 23, 42, 0.12) !important;
+}
+
+html.dark .matrix-card-solid,
+[data-theme="dark"] .matrix-card-solid,
+.dark .matrix-card-solid {
+  background: rgba(15, 23, 42, 0.94) !important;
+  border: 1px solid rgba(51, 65, 85, 0.8) !important;
+  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.5) !important;
+}

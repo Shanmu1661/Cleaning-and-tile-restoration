@@ -1,0 +1,9 @@
+# AquaGleam Robots.txt
+# Version 1.0.0
+
+User-agent: *
+Allow: /
+Disallow: /pages/404.html
+Disallow: /pages/coming-soon.html
+
+Sitemap: https://www.aquagleamrestoration.com/sitemap.xml

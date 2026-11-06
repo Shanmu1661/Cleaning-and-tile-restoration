@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 72" width="310" height="72" fill="none">
+  <defs>
+    <linearGradient id="c4-grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="c4-grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14b8a6"/>
+      <stop offset="100%" stop-color="#0d9488"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(6, 6)">
+    <polygon points="30,2 56,17 56,45 30,60 4,45 4,17" fill="url(#c4-grad1)"/>
+    <path d="M 30 2 L 56 17 L 56 45 L 30 60 Z" fill="url(#c4-grad2)"/>
+    <line x1="30" y1="2" x2="30" y2="60" stroke="#ffffff" stroke-width="2.4" stroke-opacity="0.85"/>
+    <path d="M 30 19 Q 31 26 38 28 Q 31 30 30 37 Q 29 30 22 28 Q 29 26 30 19 Z" fill="#ffffff"/>
+    <circle cx="30" cy="28" r="1.6" fill="#fef08a"/>
+  </g>
+  <g font-family="'Plus Jakarta Sans', 'Outfit', system-ui, sans-serif">
+    <text x="82" y="42" font-size="29" font-weight="900" letter-spacing="-0.5">
+      <tspan fill="#0ea5e9">Aqua</tspan><tspan fill="#0d9488">Gleam</tspan>
+    </text>
+    <text x="83" y="59" font-size="10.5" font-weight="800" fill="#94a3b8" letter-spacing="2.5">TILE &amp; GROUT CARE</text>
+  </g>
+</svg>

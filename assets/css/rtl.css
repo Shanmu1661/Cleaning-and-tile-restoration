@@ -1,0 +1,86 @@
+/* ==========================================================================
+   AquaGleam - Luxury RTL (Right-To-Left) Layout Compatibility
+   Version: 2.0.0 - Attractive Luxe Edition
+   ========================================================================== */
+
+[dir="rtl"] {
+  font-family: 'Tajawal', 'Outfit', system-ui, -apple-system, sans-serif;
+  text-align: right;
+}
+
+/* Reverse directional positioning for toasts */
+[dir="rtl"] #toast-container {
+  right: auto;
+  left: 2rem;
+}
+
+[dir="rtl"] .toast-msg {
+  border-left: none;
+  border-right: 5px solid var(--primary);
+  text-align: right;
+}
+
+[dir="rtl"] .toast-msg.toast-success {
+  border-right-color: #10b981;
+}
+
+[dir="rtl"] .toast-msg.toast-danger {
+  border-right-color: #ef4444;
+}
+
+/* Reverse floating quick actions */
+[dir="rtl"] .floating-actions {
+  left: auto;
+  right: 2rem;
+}
+
+/* Flip directional chevron & arrow icons */
+[dir="rtl"] .fa-arrow-right,
+[dir="rtl"] .fa-chevron-right,
+[dir="rtl"] .lucide-arrow-right,
+[dir="rtl"] .lucide-chevron-right {
+  transform: scaleX(-1);
+  display: inline-block;
+}
+
+[dir="rtl"] .fa-arrow-left,
+[dir="rtl"] .fa-chevron-left,
+[dir="rtl"] .lucide-arrow-left,
+[dir="rtl"] .lucide-chevron-left {
+  transform: scaleX(-1);
+  display: inline-block;
+}
+
+/* Before / After Slider in RTL */
+[dir="rtl"] .before-after-container .img-after {
+  clip-path: inset(0 0 0 calc(100% - var(--split, 50%)));
+  -webkit-clip-path: inset(0 0 0 calc(100% - var(--split, 50%)));
+}
+
+[dir="rtl"] .before-after-divider {
+  left: auto;
+  right: var(--split, 50%);
+  transform: translateX(50%);
+}
+
+[dir="rtl"] .before-after-handle {
+  left: auto;
+  right: var(--split, 50%);
+  transform: translate(50%, -50%);
+}
+
+[dir="rtl"] .slider-label-before {
+  left: auto;
+  right: 1.25rem;
+}
+
+[dir="rtl"] .slider-label-after {
+  right: auto;
+  left: 1.25rem;
+}
+
+/* Dropdown positions in RTL */
+[dir="rtl"] .nav-dropdown {
+  right: 0;
+  left: auto;
+}

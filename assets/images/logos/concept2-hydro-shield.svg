@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 72" width="310" height="72" fill="none">
+  <defs>
+    <linearGradient id="c2-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="45%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(6, 6)">
+    <!-- Droplet Shield Silhouette -->
+    <path d="M 30 2 C 46 17 58 31 58 43 C 58 54 45 60 30 60 C 15 60 2 54 2 43 C 2 31 14 17 30 2 Z" fill="url(#c2-grad)"/>
+    <!-- Internal Tile Crosshair -->
+    <line x1="30" y1="12" x2="30" y2="54" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-opacity="0.8"/>
+    <line x1="10" y1="36" x2="50" y2="36" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-opacity="0.8"/>
+    <!-- Shimmering Star Sparkle -->
+    <path d="M 46 17 Q 47 22 52 23 Q 47 24 46 29 Q 45 24 40 23 Q 45 22 46 17 Z" fill="#ffffff"/>
+  </g>
+  <g font-family="'Plus Jakarta Sans', 'Outfit', system-ui, sans-serif">
+    <text x="82" y="42" font-size="29" font-weight="900" letter-spacing="-0.5">
+      <tspan fill="#0ea5e9">Aqua</tspan><tspan fill="#14b8a6">Gleam</tspan>
+    </text>
+    <text x="83" y="59" font-size="10.5" font-weight="800" fill="#94a3b8" letter-spacing="2.5">SEAL &amp; RESTORE</text>
+  </g>
+</svg>

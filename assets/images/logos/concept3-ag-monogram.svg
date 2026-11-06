@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 72" width="310" height="72" fill="none">
+  <defs>
+    <linearGradient id="c3-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="50%" stop-color="#00b4d8"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(6, 6)">
+    <rect x="0" y="0" width="60" height="60" rx="17" fill="url(#c3-grad)"/>
+    <!-- Interlocking AG Cutouts -->
+    <path d="M 17 44 L 27 16 L 33 16 L 33 44 L 28 44 L 28 36 L 22 36 L 19 44 Z M 24 24 L 22 31 L 28 31 L 28 24 Z" fill="#ffffff"/>
+    <path d="M 47 28 C 45 20 38 18 32 18 L 32 23 C 36 23 41 24 42 29 C 43 34 42 39 37 41 C 31 42 28 40 27 37 L 22 40 C 25 45 31 47 37 47 C 45 47 50 42 50 32 L 50 30 L 37 30 L 37 35 L 44 35 C 44 37 43 39 43 39" fill="#ffffff" fill-opacity="0.95"/>
+    <polygon points="46,12 48,16 52,18 48,20 46,24 44,20 40,18 44,16" fill="#fef08a"/>
+  </g>
+  <g font-family="'Plus Jakarta Sans', 'Outfit', system-ui, sans-serif">
+    <text x="82" y="42" font-size="29" font-weight="900" letter-spacing="-0.5">
+      <tspan fill="#0284c7">Aqua</tspan><tspan fill="#059669">Gleam</tspan>
+    </text>
+    <text x="83" y="59" font-size="10.5" font-weight="800" fill="#94a3b8" letter-spacing="2.5">RESTORATION LABS</text>
+  </g>
+</svg>
