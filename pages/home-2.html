@@ -259,44 +259,43 @@
 
           </div>
 
-          <!-- Right Column: Interactive Diamond Honing Before/After Comparison -->
+          <!-- Right Column: Pure Cinematic Video Demonstration (Enhanced Contrast & Luxury Display Bezel) -->
           <div class="lg:col-span-5">
-            <div class="gradient-border-card p-3 rounded-3xl shadow-2xl relative bg-white dark:bg-slate-900">
-              
-              <!-- Floating Badge -->
-              <div class="absolute -top-3.5 -right-3.5 bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 font-black text-[11px] px-3.5 py-1.5 rounded-full shadow-lg z-20 uppercase tracking-wider flex items-center gap-1.5">
-                <i class="fa-solid fa-bolt"></i> Etch Mark Removal
-              </div>
-
-              <!-- Interactive Split Slider Component -->
-              <div class="before-after-container relative h-[380px] sm:h-[420px] rounded-2xl overflow-hidden select-none" style="--split: 50%;">
-                <!-- Base Image: After 10,000-Grit Mirror Polished White Marble -->
-                <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=900&q=80" alt="Carrara marble floor after 10000 grit diamond vitrification" class="img-base">
-
-                <!-- Overlay Image: Before Dull Acid-Etched Raw Carrara Marble -->
-                <div class="img-after" style="width: 50%;">
-                  <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=900&q=80" alt="Carrara marble before honing with acid etch marks">
+            <div class="relative">
+              <!-- Ambient Glow Behind Video Frame for Maximum Separation -->
+              <div class="absolute -inset-2 bg-gradient-to-r from-amber-500/20 via-orange-500/15 to-teal-500/20 rounded-[2.5rem] blur-xl opacity-70 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+              <!-- Outer Architectural Frame for Sharp Contrast & Depth Separation -->
+              <div class="relative p-2.5 sm:p-3 rounded-[2.2rem] bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl border border-white dark:border-slate-700/80 shadow-[0_25px_60px_-15px_rgba(15,23,42,0.35),0_0_35px_rgba(217,119,6,0.12)] ring-1 ring-slate-900/10 dark:ring-white/10 group">
+                
+                <!-- Floating Service Badge -->
+                <div class="absolute -top-3.5 -right-3.5 bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 font-black text-[11px] px-3.5 py-1.5 rounded-full shadow-lg z-20 uppercase tracking-wider flex items-center gap-1.5">
+                  <i class="fa-solid fa-play text-[10px]"></i> Live Restoration Video
                 </div>
 
-                <div class="before-after-divider" style="left: 50%;" aria-hidden="true"></div>
-
-                <span class="slider-label slider-label-before">Before: Acid Etch</span>
-                <span class="slider-label slider-label-after">After: 10,000-Grit</span>
-
-                <div class="before-after-handle" style="left: 50%;" aria-hidden="true">
-                  <i class="fa-solid fa-arrows-left-right text-xs"></i>
+                <!-- Inner Video Player Container -->
+                <div class="relative rounded-[1.6rem] overflow-hidden aspect-[4/3] sm:aspect-[16/11] bg-slate-950 cursor-pointer shadow-inner" id="hero-video-container">
+                  <!-- HTML5 Video Player with Hardware-Accelerated High-Contrast & Color Vibrancy Filter -->
+                  <video id="hero-restoration-video" class="w-full h-full object-cover transition-all duration-300" style="filter: contrast(1.18) saturate(1.22) brightness(0.98);" poster="../assets/images/stone-workflow-bg.jpg" playsinline muted loop autoplay preload="metadata">
+                    <source src="../assets/videos/demo.mp4" type="video/mp4">
+                    <source src="../assets/videos/steam-extraction.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                  </video>
+                  <!-- Delicate Inset Edge Vignette (Provides razor-sharp inner video definition) -->
+                  <div class="absolute inset-0 ring-1 ring-inset ring-black/25 pointer-events-none rounded-[1.6rem]"></div>
+                  <!-- Central Interactive Play / Pause Overlay Button (Fades out when playing, reappears on hover/pause) -->
+                  <button type="button" id="hero-video-play-btn" class="absolute inset-0 m-auto w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-amber-500/90 hover:bg-amber-400 text-slate-950 flex items-center justify-center text-xl sm:text-2xl shadow-2xl shadow-amber-500/50 backdrop-blur-sm transition-all duration-300 opacity-0 group-hover:opacity-100 focus:opacity-100 focus:outline-none focus:ring-4 focus:ring-amber-400/50 z-10" aria-label="Play or pause tile restoration video demonstration">
+                    <i class="fa-solid fa-pause text-slate-950" id="hero-video-icon"></i>
+                  </button>
                 </div>
 
-                <input type="range" min="0" max="100" value="50" class="before-after-slider" aria-label="Slide to compare before and after marble honing">
+                <!-- Video Caption -->
+                <div class="p-3 text-center">
+                  <p class="text-xs text-slate-500 dark:text-slate-400 font-medium flex items-center justify-center gap-2">
+                    <span class="inline-flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span>Live Demonstration: Surgical Tile &amp; Surface Vitrification in Action</span>
+                  </p>
+                </div>
               </div>
-
-              <!-- Caption -->
-              <div class="p-3 text-center">
-                <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">
-                  <i class="fa-solid fa-hand-pointer text-cyan-400"></i> Drag slider to witness diamond crystallization replacing dull chemical burns.
-                </p>
-              </div>
-
             </div>
           </div>
 
