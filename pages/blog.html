@@ -154,36 +154,46 @@
     </div>
   </header>
 
-  <!-- Mobile Drawer -->
+    <!-- Mobile Drawer (Matches Desktop Navbar 1:1) -->
   <div id="mobile-backdrop" class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 hidden transition-opacity"></div>
-  <aside id="mobile-nav-menu" class="fixed top-0 right-0 w-84 max-w-[85vw] h-full bg-white dark:bg-[#0c121e] border-l border-slate-200 dark:border-slate-800 p-6 z-50 shadow-2xl translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between overflow-y-auto">
+  <aside id="mobile-nav-menu" class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-white dark:bg-[#0c121e] border-l border-slate-200 dark:border-slate-800 p-6 z-50 shadow-2xl translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between overflow-y-auto" aria-label="Mobile Navigation">
     <div>
       <div class="flex items-center justify-between pb-6 border-b border-slate-200 dark:border-slate-800">
         <a href="index.html" class="inline-flex items-center">
-          <img src="../assets/images/logo.png" alt="AquaGleam Tile & Grout Care" class="h-8 w-auto object-contain">
+          <img src="../assets/images/logo.png" alt="AquaGleam Tile &amp; Grout Care" class="h-8 w-auto object-contain">
         </a>
         <button type="button" id="mobile-menu-close" class="p-2 text-slate-500 hover:text-slate-800 dark:hover:text-white" aria-label="Close menu">
           <i class="fa-solid fa-xmark text-lg"></i>
         </button>
       </div>
-      <nav class="py-6 space-y-2.5 font-bold text-slate-700 dark:text-slate-200 text-sm">
-        <div class="space-y-1 pb-2 border-b border-slate-200 dark:border-slate-800">
-          <div class="text-[10px] uppercase font-black tracking-wider text-slate-400 px-3.5 pt-1">Home Layouts</div>
-          <a href="index.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200">
-            <i class="fa-solid fa-house w-4 text-primary-500"></i> Home 1: Tile &amp; Grout Master
-          </a>
-          <a href="home-2.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200">
-            <i class="fa-solid fa-gem w-4 text-amber-500"></i> Home 2: Luxury Stone (Niche)
-          </a>
-        </div>
-        <a href="about.html" class="flex items-center gap-3 px-3.5 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fa-solid fa-circle-info w-5 text-teal-500"></i> About Us</a>
-        <a href="services.html" class="flex items-center gap-3 px-3.5 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fa-solid fa-spray-can-sparkles w-5 text-amber-500"></i> Services</a>
-        <a href="blog.html" class="flex items-center gap-3 px-3.5 py-3 rounded-xl bg-primary-50 dark:bg-primary-950/60 text-primary-600 dark:text-primary-400 font-extrabold"><i class="fa-solid fa-newspaper w-5"></i> Care Tips</a>
-        <a href="contact.html" class="flex items-center gap-3 px-3.5 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fa-solid fa-envelope w-5 text-sky-500"></i> Contact</a>
+      <nav class="py-6 space-y-2 font-bold text-sm">
+        <a href="index.html" class="flex items-center gap-3 px-3.5 py-3 rounded-xl transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">
+          <i class="fa-solid fa-house w-5 text-primary-500"></i>
+          <span>Home</span>
+        </a>
+        <a href="about.html" class="flex items-center gap-3 px-3.5 py-3 rounded-xl transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">
+          <i class="fa-solid fa-circle-info w-5 text-teal-500"></i>
+          <span>About Us</span>
+        </a>
+        <a href="services.html" class="flex items-center gap-3 px-3.5 py-3 rounded-xl transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">
+          <i class="fa-solid fa-spray-can-sparkles w-5 text-amber-500"></i>
+          <span>Services</span>
+        </a>
+        <a href="blog.html" class="flex items-center gap-3 px-3.5 py-3 rounded-xl transition-colors bg-primary-50 dark:bg-primary-950/60 text-primary-600 dark:text-primary-400 font-extrabold">
+          <i class="fa-solid fa-newspaper w-5 text-rose-500"></i>
+          <span>Care Tips</span>
+        </a>
+        <a href="contact.html" class="flex items-center gap-3 px-3.5 py-3 rounded-xl transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">
+          <i class="fa-solid fa-envelope w-5 text-sky-500"></i>
+          <span>Contact</span>
+        </a>
       </nav>
     </div>
-    <div class="pt-6 border-t border-slate-200 dark:border-slate-800">
-      <a href="contact.html" class="btn btn-primary w-full shadow-lg"><i class="fa-solid fa-calendar-check"></i> Request Consultation</a>
+    <div class="pt-4 border-t border-slate-200 dark:border-slate-800">
+      <a href="login.html" class="btn btn-primary w-full h-11 rounded-xl text-xs font-bold shadow-md flex items-center justify-center gap-2">
+        <i class="fa-solid fa-arrow-right-to-bracket text-xs"></i>
+        <span>Login</span>
+      </a>
     </div>
   </aside>
 
