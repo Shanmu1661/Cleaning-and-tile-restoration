@@ -737,19 +737,118 @@ input[type=range]::-webkit-slider-runnable-track {
   animation: float-subtle 4s ease-in-out 2s infinite;
 }
 
-/* --- 12. Hero High-Contrast Clarity Styles --- */
-.hero-backdrop-overlay {
+/* --- 12. Hero High-Contrast Clarity Styles (Dual-Theme Legibility Engine) --- */
+/* The directional overlay covers the text on the left (0-45%) with high-contrast backing,
+   while fading to 100% transparent on the right (75-100%) so the luxury background image remains completely clear */
+.hero-directional-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(105deg, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 100%);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.90) 42%, rgba(255, 255, 255, 0.40) 65%, rgba(255, 255, 255, 0) 82%);
   pointer-events: none;
+  z-index: 2;
 }
 
-html.dark .hero-backdrop-overlay,
-[data-theme="dark"] .hero-backdrop-overlay,
-.dark .hero-backdrop-overlay {
-  background: linear-gradient(105deg, rgba(10, 16, 28, 0.65) 0%, rgba(15, 23, 42, 0.50) 50%, rgba(15, 23, 42, 0.35) 100%);
+@media (max-width: 1023px) {
+  .hero-directional-overlay {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.88) 50%, rgba(255, 255, 255, 0.35) 80%, rgba(255, 255, 255, 0.05) 100%);
+  }
+}
+
+html.dark .hero-directional-overlay,
+[data-theme="dark"] .hero-directional-overlay,
+.dark .hero-directional-overlay {
+  background: linear-gradient(90deg, rgba(6, 11, 22, 0.97) 0%, rgba(6, 11, 22, 0.90) 42%, rgba(8, 14, 28, 0.45) 65%, rgba(8, 14, 28, 0) 82%);
   pointer-events: none;
+  z-index: 2;
+}
+
+@media (max-width: 1023px) {
+  html.dark .hero-directional-overlay,
+  [data-theme="dark"] .hero-directional-overlay,
+  .dark .hero-directional-overlay {
+    background: linear-gradient(180deg, rgba(6, 11, 22, 0.97) 0%, rgba(6, 11, 22, 0.90) 50%, rgba(8, 14, 28, 0.45) 80%, rgba(8, 14, 28, 0.10) 100%);
+  }
+}
+
+/* Backward-compatible aliases */
+.hero-backdrop-base {
+  display: none !important;
+}
+
+.hero-backdrop-overlay {
+  display: none !important;
+}
+
+/* Mobile & tablet responsive text-shield plate */
+.hero-content-wrap {
+  position: relative;
+  z-index: 10;
+}
+
+@media (max-width: 1023px) {
+  .hero-content-wrap {
+    background: rgba(255, 255, 255, 0.70);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    border-radius: 1.5rem;
+    padding: 1.75rem 1.5rem;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.08);
+  }
+
+  html.dark .hero-content-wrap,
+  [data-theme="dark"] .hero-content-wrap,
+  .dark .hero-content-wrap {
+    background: rgba(10, 16, 28, 0.80);
+    border-color: rgba(255, 255, 255, 0.10);
+    box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.hero-headline-text {
+  color: #020617 !important;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
+}
+
+html.dark .hero-headline-text,
+[data-theme="dark"] .hero-headline-text,
+.dark .hero-headline-text {
+  color: #ffffff !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95), 0 1px 3px rgba(0, 0, 0, 0.98);
+}
+
+.hero-lead-text {
+  color: #0f172a !important;
+  font-weight: 500 !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.85);
+}
+
+html.dark .hero-lead-text,
+[data-theme="dark"] .hero-lead-text,
+.dark .hero-lead-text {
+  color: #f1f5f9 !important;
+  font-weight: 500 !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+}
+
+.hero-badge-pill {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #e2e8f0;
+  color: #0f172a !important;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+html.dark .hero-badge-pill,
+[data-theme="dark"] .hero-badge-pill,
+.dark .hero-badge-pill {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #f8fafc !important;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
 }
 
 .hero-text-card {
@@ -766,19 +865,6 @@ html.dark .hero-text-card,
   background: rgba(15, 23, 42, 0.90);
   border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 20px 45px -12px rgba(0, 0, 0, 0.6);
-}
-
-.hero-lead-text {
-  color: #0f172a !important;
-  font-weight: 500 !important;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
-}
-
-html.dark .hero-lead-text,
-[data-theme="dark"] .hero-lead-text,
-.dark .hero-lead-text {
-  color: #f8fafc !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 /* --- 13. Calculator Result Card (High Contrast Guarantee) --- */
