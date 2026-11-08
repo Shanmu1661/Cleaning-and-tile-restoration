@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client & Contractor Sign In | AquaGleam Bathroom Restoration</title>
+  <meta name="description" content="Sign in to your AquaGleam Client Portal. Access your 5-year ColorSeal™ written warranty certificates, digital inspection reports, and schedule maintenance.">
+  <meta name="keywords" content="tile restoration login, client portal, aquagleam login, warranty certificates, grout restoration account">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sign In - AquaGleam Client Portal">
+  <meta property="og:description" content="Access your written 5-year warranties, before/after inspection scans, and annual tile maintenance schedule.">
+  <meta property="og:image" content="../assets/images/about-pillars-bg.jpg">
+
+  <!-- Favicon / Brand Identity -->
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/images/favicon-192x192.png">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0284c7',
+              600: '#0369a1',
+              700: '#075985',
+              800: '#0c4a6e',
+              900: '#082f49',
+            },
+            secondary: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              200: '#99f6e4',
+              300: '#5eead4',
+              400: '#2dd4bf',
+              500: '#0d9488',
+              600: '#0f766e',
+              700: '#115e59',
+            },
+            accent: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+            }
+          },
+          fontFamily: {
+            sans: ['Outfit', 'Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-[#060911] dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col justify-between">
+
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header id="main-header" class="sticky top-0 z-50 w-full transition-all duration-300 bg-white/80 dark:bg-[#070b13]/80 backdrop-blur-xl border-b border-slate-200/60 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group" aria-label="AquaGleam Home">
+        <img src="../assets/images/logo.png" alt="AquaGleam Tile & Grout Care" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold" aria-label="Main Navigation">
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400 py-2">
+            <span>Home</span>
+            <i class="fa-solid fa-chevron-down text-[10px] group-hover:rotate-180 transition-transform"></i>
+          </button>
+          <div class="nav-dropdown absolute left-0 top-full pt-2 w-64 hidden group-hover:block transition-all duration-200 z-50">
+            <div class="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-100 dark:border-slate-800 p-2.5 space-y-1">
+              <a href="index.html" class="flex items-center gap-3 p-2 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 text-xs font-bold text-slate-800 dark:text-slate-200">
+                <i class="fa-solid fa-house text-primary-500"></i> Home 1: Tile &amp; Grout Master
+              </a>
+              <a href="home-2.html" class="flex items-center gap-3 p-2 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 text-xs font-bold text-slate-800 dark:text-slate-200">
+                <i class="fa-solid fa-gem text-amber-500"></i> Home 2: Luxury Stone Care
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="about.html" class="text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">About Us</a>
+
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400 py-2">
+            <span>Services</span>
+            <i class="fa-solid fa-chevron-down text-[10px] group-hover:rotate-180 transition-transform"></i>
+          </button>
+          <div class="nav-dropdown absolute left-0 top-full pt-2 w-72 hidden group-hover:block transition-all duration-200 z-50">
+            <div class="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-100 dark:border-slate-800 p-3 space-y-1">
+              <a href="services.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                <div class="w-8 h-8 rounded-lg bg-primary-100 dark:bg-primary-950/60 text-primary-600 flex items-center justify-center text-xs">
+                  <i class="fa-solid fa-spray-can-sparkles"></i>
+                </div>
+                <div>
+                  <div class="font-bold text-slate-800 dark:text-slate-100 text-xs">All Services Catalog</div>
+                  <div class="text-[10px] text-slate-500">Complete restoration guide</div>
+                </div>
+              </a>
+              <a href="service-detail.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                <div class="w-8 h-8 rounded-lg bg-secondary-100 dark:bg-secondary-950/60 text-secondary-600 flex items-center justify-center text-xs">
+                  <i class="fa-solid fa-brush"></i>
+                </div>
+                <div>
+                  <div class="font-bold text-slate-800 dark:text-slate-100 text-xs">ColorSeal™ Restoration</div>
+                  <div class="text-[10px] text-slate-500">5-year warranty protection</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="blog.html" class="text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Care Tips</a>
+        <a href="contact.html" class="text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Right Actions: RTL, Theme, Auth Links -->
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <button type="button" class="rtl-toggle-btn p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-xs font-bold flex items-center gap-1.5 shadow-sm" title="Switch Reading Direction (LTR / RTL)" aria-label="Toggle RTL layout">
+          <i class="fa-solid fa-globe text-primary-500"></i>
+          <span class="rtl-badge-label hidden sm:inline">RTL</span>
+        </button>
+
+        <button type="button" class="theme-toggle-btn p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors shadow-sm" title="Toggle Theme" aria-label="Toggle dark mode">
+          <i class="theme-icon-moon fa-solid fa-moon text-sm text-primary-500"></i>
+          <i class="theme-icon-sun fa-solid fa-sun text-sm text-amber-400 hidden"></i>
+        </button>
+
+        <!-- Auth Navigation Links -->
+        <div class="hidden sm:flex items-center gap-2">
+          <a href="login.html" class="text-xs font-bold text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-950/60 px-3 py-2 rounded-xl transition-colors inline-flex items-center gap-1.5 border border-primary-200 dark:border-primary-800" aria-label="Sign In to Account">
+            <i class="fa-solid fa-arrow-right-to-bracket text-primary-500"></i>
+            <span>Login</span>
+          </a>
+          <a href="register.html" class="btn btn-primary text-xs py-2.5 px-4 shadow-md inline-flex items-center gap-1.5 font-bold" aria-label="Create New Account">
+            <i class="fa-solid fa-user-plus text-xs"></i>
+            <span>Register</span>
+          </a>
+        </div>
+
+        <button type="button" id="mobile-menu-btn" class="lg:hidden p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800" aria-label="Open mobile navigation">
+          <i class="fa-solid fa-bars text-lg"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-backdrop" class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+  <aside id="mobile-nav-menu" class="fixed top-0 right-0 w-84 max-w-[85vw] h-full bg-white dark:bg-[#0c121e] border-l border-slate-200 dark:border-slate-800 p-6 z-50 shadow-2xl translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between overflow-y-auto">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-slate-200 dark:border-slate-800">
+        <a href="index.html" class="inline-flex items-center">
+          <img src="../assets/images/logo.png" alt="AquaGleam Tile & Grout Care" class="h-8 w-auto object-contain">
+        </a>
+        <button type="button" id="mobile-menu-close" class="p-2 text-slate-500 hover:text-slate-800 dark:hover:text-white" aria-label="Close menu">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+      <nav class="py-6 space-y-2.5 font-bold text-slate-700 dark:text-slate-200 text-sm">
+        <div class="space-y-1 pb-2 border-b border-slate-200 dark:border-slate-800">
+          <div class="text-[10px] uppercase font-black tracking-wider text-slate-400 px-3.5 pt-1">Home Layouts</div>
+          <a href="index.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200">
+            <i class="fa-solid fa-house w-4 text-primary-500"></i> Home 1: Tile &amp; Grout Master
+          </a>
+          <a href="home-2.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200">
+            <i class="fa-solid fa-gem w-4 text-amber-500"></i> Home 2: Luxury Stone (Niche)
+          </a>
+        </div>
+        <a href="about.html" class="flex items-center gap-3 px-3.5 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200"><i class="fa-solid fa-circle-info w-5 text-teal-500"></i> About Us</a>
+        <a href="services.html" class="flex items-center gap-3 px-3.5 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200"><i class="fa-solid fa-spray-can-sparkles w-5 text-amber-500"></i> Services</a>
+        <a href="blog.html" class="flex items-center gap-3 px-3.5 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200"><i class="fa-solid fa-newspaper w-5 text-rose-500"></i> Care Tips</a>
+        <a href="contact.html" class="flex items-center gap-3 px-3.5 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200"><i class="fa-solid fa-envelope w-5 text-sky-500"></i> Contact</a>
+      </nav>
+    </div>
+    <div class="pt-4 border-t border-slate-200 dark:border-slate-800 space-y-2">
+      <div class="grid grid-cols-2 gap-2">
+        <a href="login.html" class="btn btn-primary text-xs py-2.5 text-center flex items-center justify-center gap-1.5"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
+        <a href="register.html" class="btn btn-outline text-xs py-2.5 text-center flex items-center justify-center gap-1.5"><i class="fa-solid fa-user-plus"></i> Register</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content: Authentication Section -->
+  <main id="main-content" class="flex-1 relative flex items-center py-12 lg:py-16 bg-cover bg-center bg-no-repeat overflow-hidden" style="background-image: url('../assets/images/about-pillars-bg.jpg');">
+    <!-- Directional Gradient Scrim: Crisp Image Background with 100% Legible Contrast -->
+    <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-white/40 dark:from-slate-950/95 dark:via-slate-950/85 dark:to-slate-950/45 pointer-events-none"></div>
+    <div class="ambient-glow w-96 h-96 -top-20 -left-20 bg-primary-500/15 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left Column: Portal Value Proposition & Trust Badges -->
+        <div class="lg:col-span-6 space-y-6 text-slate-800 dark:text-slate-100">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary-100 dark:bg-primary-950/60 border border-primary-300 dark:border-primary-800 text-primary-700 dark:text-primary-300 text-xs font-black uppercase tracking-wider shadow-sm">
+            <i class="fa-solid fa-shield-halved text-primary-500"></i>
+            <span>Client &amp; Contractor Portal</span>
+          </div>
+
+          <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 dark:text-white tracking-tight leading-tight">
+            Manage Your Restored Bathroom <span class="bg-gradient-to-r from-primary-600 via-secondary-500 to-teal-500 bg-clip-text text-transparent">With Confidence</span>
+          </h1>
+
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-medium">
+            Sign in to access your transferable 5-year ColorSeal™ written warranty certificates, high-resolution before/after laser porosity scans, and schedule annual priority maintenance.
+          </p>
+
+          <!-- 3 Portal Benefit Cards -->
+          <div class="space-y-3 pt-2">
+            <div class="p-3.5 rounded-2xl bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800 flex items-start gap-3.5 shadow-sm">
+              <div class="w-10 h-10 rounded-xl bg-primary-500/10 text-primary-600 dark:text-primary-400 flex items-center justify-center shrink-0 text-base">
+                <i class="fa-solid fa-file-shield"></i>
+              </div>
+              <div>
+                <div class="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">5-Year Written Warranty Vault</div>
+                <div class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400">Instantly download signed and transferable certificate of restoration.</div>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-2xl bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800 flex items-start gap-3.5 shadow-sm">
+              <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 text-base">
+                <i class="fa-solid fa-images"></i>
+              </div>
+              <div>
+                <div class="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">4K Before &amp; After Inspection Scans</div>
+                <div class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400">Review microscopic grout line analysis and gloss reflectance levels.</div>
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-2xl bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800 flex items-start gap-3.5 shadow-sm">
+              <div class="w-10 h-10 rounded-xl bg-teal-500/10 text-teal-600 dark:text-teal-400 flex items-center justify-center shrink-0 text-base">
+                <i class="fa-solid fa-calendar-check"></i>
+              </div>
+              <div>
+                <div class="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">1-Click Annual Maintenance Scheduling</div>
+                <div class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400">Lock in your yearly neutral pH steam refresh without waiting on hold.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Login Card with Validation -->
+        <div class="lg:col-span-6 max-w-lg mx-auto w-full">
+          <div class="bg-white/95 dark:bg-[#0c121e]/95 backdrop-blur-xl border border-slate-200 dark:border-slate-800/80 rounded-3xl p-6 sm:p-9 shadow-2xl relative overflow-hidden">
+            
+            <!-- Auth Tab Switcher -->
+            <div class="grid grid-cols-2 p-1 bg-slate-100 dark:bg-slate-900 rounded-2xl mb-6">
+              <a href="login.html" class="auth-tab-btn active py-2.5 text-center text-xs font-black rounded-xl text-white transition-all flex items-center justify-center gap-1.5">
+                <i class="fa-solid fa-arrow-right-to-bracket text-xs"></i> Sign In
+              </a>
+              <a href="register.html" class="auth-tab-btn py-2.5 text-center text-xs font-black rounded-xl text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all flex items-center justify-center gap-1.5">
+                <i class="fa-solid fa-user-plus text-xs"></i> Create Account
+              </a>
+            </div>
+
+            <!-- Form Header -->
+            <div class="mb-5 space-y-1">
+              <h2 class="text-xl sm:text-2xl font-black text-slate-950 dark:text-white tracking-tight">Welcome Back</h2>
+              <p class="text-xs text-slate-500 dark:text-slate-400">Enter your credentials to access your client portal.</p>
+            </div>
+
+            <!-- Quick 1-Click Demo Fill Pill -->
+            <button type="button" id="demo-fill-btn" class="w-full mb-5 py-2 px-3 rounded-xl bg-primary-50 hover:bg-primary-100 dark:bg-primary-950/60 dark:hover:bg-primary-900/60 border border-primary-200 dark:border-primary-800 text-primary-700 dark:text-primary-300 text-xs font-bold transition-all flex items-center justify-between group">
+              <span class="flex items-center gap-1.5">
+                <i class="fa-solid fa-wand-magic-sparkles text-primary-500 group-hover:rotate-12 transition-transform"></i>
+                <span>Fill Demo Client Account</span>
+              </span>
+              <span class="text-[10px] uppercase font-black bg-primary-200/80 dark:bg-primary-800 px-2 py-0.5 rounded-md">1-Click</span>
+            </button>
+
+            <!-- Login Form with Live Client-Side Validation -->
+            <form id="login-form" class="space-y-4" novalidate>
+              
+              <!-- Email Input -->
+              <div class="form-group" id="group-email">
+                <label for="login-email" class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">
+                  Email Address <span class="text-rose-500">*</span>
+                </label>
+                <div class="relative">
+                  <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                    <i class="fa-solid fa-envelope text-sm"></i>
+                  </span>
+                  <input type="email" id="login-email" name="email" required autocomplete="email" placeholder="client@aquagleam.com" class="form-input pl-10 text-sm">
+                  <span class="valid-feedback-icon absolute inset-y-0 right-0 pr-3.5 flex items-center pointer-events-none text-emerald-500 hidden">
+                    <i class="fa-solid fa-circle-check text-sm"></i>
+                  </span>
+                </div>
+                <span class="error-text">Please enter a valid email address (e.g., name@domain.com).</span>
+              </div>
+
+              <!-- Password Input -->
+              <div class="form-group" id="group-password">
+                <div class="flex items-center justify-between mb-1.5">
+                  <label for="login-password" class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300">
+                    Password <span class="text-rose-500">*</span>
+                  </label>
+                  <button type="button" id="open-forgot-modal" class="text-xs text-primary-600 dark:text-primary-400 hover:underline font-semibold">
+                    Forgot password?
+                  </button>
+                </div>
+                <div class="password-wrapper">
+                  <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                    <i class="fa-solid fa-lock text-sm"></i>
+                  </span>
+                  <input type="password" id="login-password" name="password" required minlength="6" autocomplete="current-password" placeholder="••••••••" class="form-input pl-10 text-sm">
+                  <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility" data-target="login-password">
+                    <i class="fa-solid fa-eye text-sm"></i>
+                  </button>
+                </div>
+                <span class="error-text">Password is required (minimum 6 characters).</span>
+              </div>
+
+              <!-- Remember Me & Security Status -->
+              <div class="flex items-center justify-between pt-1">
+                <label class="flex items-center gap-2 cursor-pointer text-xs text-slate-600 dark:text-slate-300 font-medium">
+                  <input type="checkbox" id="remember-me" class="w-4 h-4 rounded text-primary-600 focus:ring-primary-500 border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900">
+                  <span>Remember this device for 30 days</span>
+                </label>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" id="login-submit-btn" class="btn btn-primary w-full py-3.5 text-sm font-black shadow-lg shadow-primary-500/25 flex items-center justify-center gap-2 mt-2">
+                <span>Sign In to Portal</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </button>
+            </form>
+
+            <!-- Social Logins -->
+            <div class="relative my-6">
+              <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-slate-200 dark:border-slate-800"></div></div>
+              <div class="relative flex justify-center text-xs uppercase"><span class="bg-white dark:bg-[#0c121e] px-3 text-slate-400 font-semibold">Or continue with</span></div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+              <button type="button" class="social-login-btn py-2.5 px-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 text-xs font-bold text-slate-700 dark:text-slate-200 transition-colors flex items-center justify-center gap-2">
+                <i class="fa-brands fa-google text-rose-500 text-sm"></i> Google
+              </button>
+              <button type="button" class="social-login-btn py-2.5 px-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 text-xs font-bold text-slate-700 dark:text-slate-200 transition-colors flex items-center justify-center gap-2">
+                <i class="fa-brands fa-apple text-slate-900 dark:text-white text-base"></i> Apple
+              </button>
+            </div>
+
+            <!-- Card Bottom Switcher -->
+            <div class="mt-6 pt-5 border-t border-slate-200 dark:border-slate-800 text-center text-xs text-slate-500 dark:text-slate-400">
+              Don't have an account yet?
+              <a href="register.html" class="font-bold text-primary-600 dark:text-primary-400 hover:underline ml-1">Create an account</a>
+            </div>
+
+            <!-- Security Footnote -->
+            <div class="mt-4 flex items-center justify-center gap-3 text-[11px] text-slate-400">
+              <span class="inline-flex items-center gap-1"><i class="fa-solid fa-lock text-emerald-500"></i> 256-Bit SSL Encrypted</span>
+              <span>&bull;</span>
+              <span class="inline-flex items-center gap-1"><i class="fa-solid fa-shield text-primary-500"></i> IICRC Verified</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Interactive Forgot Password Modal -->
+  <div id="forgot-password-modal" class="modal-backdrop fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="modal-dialog bg-white dark:bg-slate-900 rounded-3xl max-w-md w-full p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-2xl relative">
+      <button type="button" class="modal-close-btn absolute top-5 right-5 text-slate-400 hover:text-slate-700 dark:hover:text-white text-lg" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="w-12 h-12 rounded-2xl bg-primary-100 dark:bg-primary-950/60 text-primary-600 flex items-center justify-center text-xl mb-4">
+        <i class="fa-solid fa-key"></i>
+      </div>
+
+      <h3 class="text-xl font-black text-slate-900 dark:text-white">Reset Account Password</h3>
+      <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-5">
+        Enter the email associated with your AquaGleam client portal account. We'll send a secure password reset link.
+      </p>
+
+      <form id="forgot-form" class="space-y-4" novalidate>
+        <div class="form-group" id="group-forgot-email">
+          <label for="forgot-email" class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1">
+            Registered Email
+          </label>
+          <input type="email" id="forgot-email" required placeholder="name@domain.com" class="form-input text-sm">
+          <span class="error-text">Please enter a valid email address.</span>
+        </div>
+
+        <button type="submit" id="forgot-submit-btn" class="btn btn-primary w-full py-3 text-xs font-bold">
+          Send Recovery Link
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Global Footer -->
+  <footer class="bg-slate-900 text-slate-300 border-t border-slate-800 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+        <!-- Company Info & Mission -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="index.html" class="inline-flex items-center gap-3">
+            <img src="../assets/images/logo.png" alt="AquaGleam Tile &amp; Grout Care" class="h-10 w-auto object-contain">
+          </a>
+          <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
+            America's premier commercial and residential bathroom tile cleaning, deep grout recoloring, and marble restoration company. Clean spaces, healthy families.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://www.facebook.com/login/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-primary-600 text-white flex items-center justify-center transition-colors" aria-label="Facebook Login"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+            <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-primary-600 text-white flex items-center justify-center transition-colors" aria-label="Instagram Login"><i class="fa-brands fa-instagram text-sm"></i></a>
+            <a href="https://accounts.google.com/ServiceLogin?service=youtube" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-primary-600 text-white flex items-center justify-center transition-colors" aria-label="YouTube Login"><i class="fa-brands fa-youtube text-sm"></i></a>
+            <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-primary-600 text-white flex items-center justify-center transition-colors" aria-label="LinkedIn Login"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+          </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white">Navigation</h4>
+          <ul class="text-sm space-y-2 text-slate-400">
+            <li><a href="index.html" class="hover:text-primary-400 transition-colors">Home Page</a></li>
+            <li><a href="about.html" class="hover:text-primary-400 transition-colors">About Our Team</a></li>
+            <li><a href="services.html" class="hover:text-primary-400 transition-colors">Services Catalog</a></li>
+            <li><a href="blog.html" class="hover:text-primary-400 transition-colors">Care Tips &amp; Blog</a></li>
+            <li><a href="contact.html" class="hover:text-primary-400 transition-colors">Contact &amp; Quotes</a></li>
+            <li><a href="login.html" class="text-primary-400 font-bold transition-colors">Client Portal (Login)</a></li>
+            <li><a href="register.html" class="hover:text-primary-400 transition-colors">Register Account</a></li>
+          </ul>
+        </div>
+
+        <!-- Restoration Services -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white">Core Services</h4>
+          <ul class="text-sm space-y-2 text-slate-400">
+            <li><a href="service-detail.html" class="hover:text-primary-400 transition-colors">Grout ColorSealing</a></li>
+            <li><a href="services.html#steam" class="hover:text-primary-400 transition-colors">230&deg;F Steam Clean</a></li>
+            <li><a href="services.html#silicone" class="hover:text-primary-400 transition-colors">Silicone Recaulking</a></li>
+            <li><a href="services.html#marble" class="hover:text-primary-400 transition-colors">Marble Honing</a></li>
+            <li><a href="services.html#epoxy" class="hover:text-primary-400 transition-colors">Epoxy Regrouting</a></li>
+          </ul>
+        </div>
+
+        <!-- Maintenance Newsletter -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white">Maintenance Newsletter</h4>
+          <p class="text-xs text-slate-400">Get bi-weekly tile care tips and secret seasonal discount coupons.</p>
+          <form class="validate-form space-y-2" id="footer-newsletter">
+            <div class="form-group">
+              <input type="email" placeholder="Your email address" required class="form-input text-xs bg-slate-800 border-slate-700 text-white placeholder-slate-500">
+            </div>
+            <button type="submit" class="btn btn-primary w-full text-xs py-2.5">
+              Subscribe Free
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Bottom Credits and Legal -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <div>
+          &copy; 2026 AquaGleam Tile &amp; Grout Restoration Inc. All rights reserved.
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:text-slate-400">Privacy Policy</a>
+          <span>&bull;</span>
+          <a href="#" class="hover:text-slate-400">Terms of Service</a>
+          <span>&bull;</span>
+          <a href="#" class="hover:text-slate-400">Warranty Registration</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const loginForm = document.getElementById('login-form');
+      const emailInput = document.getElementById('login-email');
+      const passwordInput = document.getElementById('login-password');
+      const groupEmail = document.getElementById('group-email');
+      const groupPassword = document.getElementById('group-password');
+      const demoFillBtn = document.getElementById('demo-fill-btn');
+      const submitBtn = document.getElementById('login-submit-btn');
+
+      // Password visibility toggles
+      document.querySelectorAll('.password-toggle-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetId = btn.getAttribute('data-target');
+          const input = document.getElementById(targetId);
+          const icon = btn.querySelector('i');
+          if (input.type === 'password') {
+            input.type = 'text';
+            icon.classList.remove('fa-eye');
+            icon.classList.add('fa-eye-slash');
+          } else {
+            input.type = 'password';
+            icon.classList.remove('fa-eye-slash');
+            icon.classList.add('fa-eye');
+          }
+        });
+      });
+
+      // Quick 1-Click Demo Fill
+      if (demoFillBtn) {
+        demoFillBtn.addEventListener('click', () => {
+          emailInput.value = 'client@aquagleam.com';
+          passwordInput.value = 'Restore2026!';
+          validateEmailInput();
+          validatePasswordInput();
+          if (typeof showToast === 'function') {
+            showToast('Demo client credentials populated!', 'info');
+          }
+        });
+      }
+
+      function validateEmailInput() {
+        const val = emailInput.value.trim();
+        const valid = /^[^s@]+@[^s@]+.[^s@]+$/.test(val);
+        const icon = groupEmail.querySelector('.valid-feedback-icon');
+        if (!valid) {
+          groupEmail.classList.add('has-error');
+          groupEmail.classList.remove('is-valid');
+          if (icon) icon.classList.add('hidden');
+          return false;
+        } else {
+          groupEmail.classList.remove('has-error');
+          groupEmail.classList.add('is-valid');
+          if (icon) icon.classList.remove('hidden');
+          return true;
+        }
+      }
+
+      function validatePasswordInput() {
+        const val = passwordInput.value;
+        if (!val || val.length < 6) {
+          groupPassword.classList.add('has-error');
+          groupPassword.classList.remove('is-valid');
+          return false;
+        } else {
+          groupPassword.classList.remove('has-error');
+          groupPassword.classList.add('is-valid');
+          return true;
+        }
+      }
+
+      emailInput.addEventListener('input', validateEmailInput);
+      emailInput.addEventListener('blur', validateEmailInput);
+      passwordInput.addEventListener('input', validatePasswordInput);
+      passwordInput.addEventListener('blur', validatePasswordInput);
+
+      // Handle Login Submit
+      loginForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const emailValid = validateEmailInput();
+        const passwordValid = validatePasswordInput();
+
+        if (!emailValid) {
+          emailInput.focus();
+          return;
+        }
+        if (!passwordValid) {
+          passwordInput.focus();
+          return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Authenticating...';
+
+        setTimeout(() => {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> Sign In Successful';
+          submitBtn.classList.remove('btn-primary');
+          submitBtn.classList.add('bg-emerald-600', 'text-white');
+
+          if (typeof showToast === 'function') {
+            showToast('Welcome back, Sarah! Accessing your client warranty vault...', 'success');
+          }
+
+          setTimeout(() => {
+            window.location.href = 'index.html';
+          }, 1500);
+        }, 1200);
+      });
+
+      // Forgot Password Modal
+      const forgotModal = document.getElementById('forgot-password-modal');
+      const openForgotBtn = document.getElementById('open-forgot-modal');
+      const forgotCloseBtn = forgotModal.querySelector('.modal-close-btn');
+      const forgotForm = document.getElementById('forgot-form');
+      const forgotEmailInput = document.getElementById('forgot-email');
+      const groupForgotEmail = document.getElementById('group-forgot-email');
+      const forgotSubmitBtn = document.getElementById('forgot-submit-btn');
+
+      if (openForgotBtn) {
+        openForgotBtn.addEventListener('click', () => {
+          forgotModal.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+          forgotEmailInput.focus();
+        });
+      }
+
+      function closeForgotModal() {
+        forgotModal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      if (forgotCloseBtn) {
+        forgotCloseBtn.addEventListener('click', closeForgotModal);
+      }
+
+      forgotModal.addEventListener('click', (e) => {
+        if (e.target === forgotModal) closeForgotModal();
+      });
+
+      forgotForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const emailVal = forgotEmailInput.value.trim();
+        const valid = /^[^s@]+@[^s@]+.[^s@]+$/.test(emailVal);
+        if (!valid) {
+          groupForgotEmail.classList.add('has-error');
+          return;
+        }
+        groupForgotEmail.classList.remove('has-error');
+        forgotSubmitBtn.disabled = true;
+        forgotSubmitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+
+        setTimeout(() => {
+          forgotSubmitBtn.disabled = false;
+          forgotSubmitBtn.innerHTML = 'Recovery Link Dispatched';
+          if (typeof showToast === 'function') {
+            showToast('Password reset link sent to ' + emailVal, 'success');
+          }
+          setTimeout(() => {
+            closeForgotModal();
+            forgotForm.reset();
+            forgotSubmitBtn.innerHTML = 'Send Recovery Link';
+          }, 1500);
+        }, 1000);
+      });
+
+      // Check URL params for registration success notice
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('registered') === 'true') {
+        if (typeof showToast === 'function') {
+          showToast('Account created successfully! Please sign in with your new password.', 'success');
+        }
+      }
+    });
+  </script>
+</body>
+</html>

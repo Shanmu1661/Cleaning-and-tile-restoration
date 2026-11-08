@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account | AquaGleam Client & Warranty Portal</title>
+  <meta name="description" content="Register for an AquaGleam client portal account. Secure your 5-year written ColorSeal™ guarantee, book priority appointments, and track bathroom care.">
+  <meta name="keywords" content="register tile restoration account, homeowner portal, warranty sign up, bathroom care register">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Create Account - AquaGleam Client Portal">
+  <meta property="og:description" content="Join the AquaGleam client network for written 5-year guarantees and priority service.">
+  <meta property="og:image" content="../assets/images/guarantee-bg-luxury.jpg">
+
+  <!-- Favicon / Brand Identity -->
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/images/favicon-192x192.png">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0284c7',
+              600: '#0369a1',
+              700: '#075985',
+              800: '#0c4a6e',
+              900: '#082f49',
+            },
+            secondary: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              200: '#99f6e4',
+              300: '#5eead4',
+              400: '#2dd4bf',
+              500: '#0d9488',
+              600: '#0f766e',
+              700: '#115e59',
+            },
+            accent: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+            }
+          },
+          fontFamily: {
+            sans: ['Outfit', 'Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-[#060911] dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col justify-between">
+
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header id="main-header" class="sticky top-0 z-50 w-full transition-all duration-300 bg-white/80 dark:bg-[#070b13]/80 backdrop-blur-xl border-b border-slate-200/60 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group" aria-label="AquaGleam Home">
+        <img src="../assets/images/logo.png" alt="AquaGleam Tile & Grout Care" class="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold" aria-label="Main Navigation">
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400 py-2">
+            <span>Home</span>
+            <i class="fa-solid fa-chevron-down text-[10px] group-hover:rotate-180 transition-transform"></i>
+          </button>
+          <div class="nav-dropdown absolute left-0 top-full pt-2 w-64 hidden group-hover:block transition-all duration-200 z-50">
+            <div class="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-100 dark:border-slate-800 p-2.5 space-y-1">
+              <a href="index.html" class="flex items-center gap-3 p-2 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 text-xs font-bold text-slate-800 dark:text-slate-200">
+                <i class="fa-solid fa-house text-primary-500"></i> Home 1: Tile &amp; Grout Master
+              </a>
+              <a href="home-2.html" class="flex items-center gap-3 p-2 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 text-xs font-bold text-slate-800 dark:text-slate-200">
+                <i class="fa-solid fa-gem text-amber-500"></i> Home 2: Luxury Stone Care
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="about.html" class="text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">About Us</a>
+
+        <div class="relative group">
+          <button type="button" class="flex items-center gap-1.5 text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400 py-2">
+            <span>Services</span>
+            <i class="fa-solid fa-chevron-down text-[10px] group-hover:rotate-180 transition-transform"></i>
+          </button>
+          <div class="nav-dropdown absolute left-0 top-full pt-2 w-72 hidden group-hover:block transition-all duration-200 z-50">
+            <div class="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-100 dark:border-slate-800 p-3 space-y-1">
+              <a href="services.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                <div class="w-8 h-8 rounded-lg bg-primary-100 dark:bg-primary-950/60 text-primary-600 flex items-center justify-center text-xs">
+                  <i class="fa-solid fa-spray-can-sparkles"></i>
+                </div>
+                <div>
+                  <div class="font-bold text-slate-800 dark:text-slate-100 text-xs">All Services Catalog</div>
+                  <div class="text-[10px] text-slate-500">Complete restoration guide</div>
+                </div>
+              </a>
+              <a href="service-detail.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                <div class="w-8 h-8 rounded-lg bg-secondary-100 dark:bg-secondary-950/60 text-secondary-600 flex items-center justify-center text-xs">
+                  <i class="fa-solid fa-brush"></i>
+                </div>
+                <div>
+                  <div class="font-bold text-slate-800 dark:text-slate-100 text-xs">ColorSeal™ Restoration</div>
+                  <div class="text-[10px] text-slate-500">5-year warranty protection</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="blog.html" class="text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Care Tips</a>
+        <a href="contact.html" class="text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Right Actions: RTL, Theme, Auth Links -->
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <button type="button" class="rtl-toggle-btn p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-xs font-bold flex items-center gap-1.5 shadow-sm" title="Switch Reading Direction (LTR / RTL)" aria-label="Toggle RTL layout">
+          <i class="fa-solid fa-globe text-primary-500"></i>
+          <span class="rtl-badge-label hidden sm:inline">RTL</span>
+        </button>
+
+        <button type="button" class="theme-toggle-btn p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors shadow-sm" title="Toggle Theme" aria-label="Toggle dark mode">
+          <i class="theme-icon-moon fa-solid fa-moon text-sm text-primary-500"></i>
+          <i class="theme-icon-sun fa-solid fa-sun text-sm text-amber-400 hidden"></i>
+        </button>
+
+        <!-- Auth Navigation Links -->
+        <div class="hidden sm:flex items-center gap-2">
+          <a href="login.html" class="text-xs font-bold text-slate-700 dark:text-slate-200 hover:text-primary-600 dark:hover:text-primary-400 px-3 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors inline-flex items-center gap-1.5" aria-label="Sign In to Account">
+            <i class="fa-solid fa-arrow-right-to-bracket text-primary-500"></i>
+            <span>Login</span>
+          </a>
+          <a href="register.html" class="btn btn-primary text-xs py-2.5 px-4 shadow-md inline-flex items-center gap-1.5 font-bold" aria-label="Create New Account">
+            <i class="fa-solid fa-user-plus text-xs"></i>
+            <span>Register</span>
+          </a>
+        </div>
+
+        <button type="button" id="mobile-menu-btn" class="lg:hidden p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800" aria-label="Open mobile navigation">
+          <i class="fa-solid fa-bars text-lg"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-backdrop" class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+  <aside id="mobile-nav-menu" class="fixed top-0 right-0 w-84 max-w-[85vw] h-full bg-white dark:bg-[#0c121e] border-l border-slate-200 dark:border-slate-800 p-6 z-50 shadow-2xl translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between overflow-y-auto">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-slate-200 dark:border-slate-800">
+        <a href="index.html" class="inline-flex items-center">
+          <img src="../assets/images/logo.png" alt="AquaGleam Tile & Grout Care" class="h-8 w-auto object-contain">
+        </a>
+        <button type="button" id="mobile-menu-close" class="p-2 text-slate-500 hover:text-slate-800 dark:hover:text-white" aria-label="Close menu">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+      <nav class="py-6 space-y-2.5 font-bold text-slate-700 dark:text-slate-200 text-sm">
+        <div class="space-y-1 pb-2 border-b border-slate-200 dark:border-slate-800">
+          <div class="text-[10px] uppercase font-black tracking-wider text-slate-400 px-3.5 pt-1">Home Layouts</div>
+          <a href="index.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200">
+            <i class="fa-solid fa-house w-4 text-primary-500"></i> Home 1: Tile &amp; Grout Master
+          </a>
+          <a href="home-2.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200">
+            <i class="fa-solid fa-gem w-4 text-amber-500"></i> Home 2: Luxury Stone (Niche)
+          </a>
+        </div>
+        <a href="about.html" class="flex items-center gap-3 px-3.5 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200"><i class="fa-solid fa-circle-info w-5 text-teal-500"></i> About Us</a>
+        <a href="services.html" class="flex items-center gap-3 px-3.5 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200"><i class="fa-solid fa-spray-can-sparkles w-5 text-amber-500"></i> Services</a>
+        <a href="blog.html" class="flex items-center gap-3 px-3.5 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200"><i class="fa-solid fa-newspaper w-5 text-rose-500"></i> Care Tips</a>
+        <a href="contact.html" class="flex items-center gap-3 px-3.5 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200"><i class="fa-solid fa-envelope w-5 text-sky-500"></i> Contact</a>
+      </nav>
+    </div>
+    <div class="pt-4 border-t border-slate-200 dark:border-slate-800 space-y-2">
+      <div class="grid grid-cols-2 gap-2">
+        <a href="login.html" class="btn btn-outline text-xs py-2.5 text-center flex items-center justify-center gap-1.5"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
+        <a href="register.html" class="btn btn-primary text-xs py-2.5 text-center flex items-center justify-center gap-1.5"><i class="fa-solid fa-user-plus"></i> Register</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content: Registration Section -->
+  <main id="main-content" class="flex-1 relative flex items-center py-12 lg:py-16 bg-cover bg-center bg-no-repeat overflow-hidden" style="background-image: url('../assets/images/guarantee-bg-luxury.jpg');">
+    <!-- Directional Gradient Scrim: Crisp Image Background with 100% Legible Contrast -->
+    <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/45 dark:from-slate-950/95 dark:via-slate-950/85 dark:to-slate-950/50 pointer-events-none"></div>
+    <div class="ambient-glow w-96 h-96 -top-20 -left-20 bg-secondary-500/15 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left Column: Registration Benefits -->
+        <div class="lg:col-span-5 space-y-6 text-slate-800 dark:text-slate-100">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary-100 dark:bg-secondary-950/60 border border-secondary-300 dark:border-secondary-800 text-secondary-800 dark:text-secondary-300 text-xs font-black uppercase tracking-wider shadow-sm">
+            <i class="fa-solid fa-user-shield text-secondary-600"></i>
+            <span>Complimentary Lifetime Membership</span>
+          </div>
+
+          <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 dark:text-white tracking-tight leading-tight">
+            Protect Your Bathroom <span class="bg-gradient-to-r from-primary-600 via-secondary-500 to-teal-500 bg-clip-text text-transparent">Restoration Asset</span>
+          </h1>
+
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-medium">
+            Create your account to register your tile warranty, get automated notifications before annual re-sealing windows expire, and unlock preferred member pricing.
+          </p>
+
+          <!-- 4 Bullet Feature Badges -->
+          <div class="space-y-3 pt-2">
+            <div class="flex items-center gap-3">
+              <div class="w-7 h-7 rounded-full bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 text-xs font-black">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-200">5-Year Written Guarantee Digital Storage</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="w-7 h-7 rounded-full bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 text-xs font-black">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-200">Direct Chat with Your Master Craftsman</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="w-7 h-7 rounded-full bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 text-xs font-black">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-200">Automated Annual Care Reminders</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="w-7 h-7 rounded-full bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 text-xs font-black">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <span class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-200">15% Multi-Bathroom Whole-Home Savings</span>
+            </div>
+          </div>
+
+          <!-- Trust Citation Box -->
+          <div class="p-4 rounded-2xl bg-white/70 dark:bg-slate-900/70 border border-slate-200/80 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400 flex items-center gap-3">
+            <i class="fa-solid fa-lock text-primary-500 text-lg"></i>
+            <div>
+              <span class="font-bold text-slate-700 dark:text-slate-200 block">Strict Data Privacy Policy</span>
+              Your information is never sold or shared. Stored in encrypted HIPAA-grade cloud vaults.
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Registration Card with Real-Time Strength Meter & Full Validation -->
+        <div class="lg:col-span-7 max-w-xl mx-auto w-full">
+          <div class="bg-white/95 dark:bg-[#0c121e]/95 backdrop-blur-xl border border-slate-200 dark:border-slate-800/80 rounded-3xl p-6 sm:p-9 shadow-2xl relative overflow-hidden">
+            
+            <!-- Auth Tab Switcher -->
+            <div class="grid grid-cols-2 p-1 bg-slate-100 dark:bg-slate-900 rounded-2xl mb-6">
+              <a href="login.html" class="auth-tab-btn py-2.5 text-center text-xs font-black rounded-xl text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all flex items-center justify-center gap-1.5">
+                <i class="fa-solid fa-arrow-right-to-bracket text-xs"></i> Sign In
+              </a>
+              <a href="register.html" class="auth-tab-btn active py-2.5 text-center text-xs font-black rounded-xl text-white transition-all flex items-center justify-center gap-1.5">
+                <i class="fa-solid fa-user-plus text-xs"></i> Create Account
+              </a>
+            </div>
+
+            <!-- Form Header -->
+            <div class="mb-5 space-y-1">
+              <h2 class="text-xl sm:text-2xl font-black text-slate-950 dark:text-white tracking-tight">Create Client Account</h2>
+              <p class="text-xs text-slate-500 dark:text-slate-400">Takes less than 60 seconds. No credit card required.</p>
+            </div>
+
+            <!-- Registration Form with Live Validation & Password Strength -->
+            <form id="register-form" class="space-y-4" novalidate>
+              
+              <!-- Account Type Selector -->
+              <div class="space-y-1.5">
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300">
+                  Account Type
+                </label>
+                <div class="grid grid-cols-2 gap-3">
+                  <label class="flex items-center gap-2 p-3 rounded-xl border border-primary-500/50 bg-primary-50/50 dark:bg-primary-950/30 cursor-pointer text-xs font-bold text-slate-800 dark:text-slate-200">
+                    <input type="radio" name="account_type" value="homeowner" checked class="text-primary-600 focus:ring-primary-500">
+                    <span>Residential Homeowner</span>
+                  </label>
+                  <label class="flex items-center gap-2 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 cursor-pointer text-xs font-semibold text-slate-700 dark:text-slate-300">
+                    <input type="radio" name="account_type" value="commercial" class="text-primary-600 focus:ring-primary-500">
+                    <span>Commercial / HOA</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Name & Email (2-Column on Tablet/Desktop) -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- Full Name -->
+                <div class="form-group" id="group-reg-name">
+                  <label for="reg-name" class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">
+                    Full Name <span class="text-rose-500">*</span>
+                  </label>
+                  <div class="relative">
+                    <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                      <i class="fa-solid fa-user text-sm"></i>
+                    </span>
+                    <input type="text" id="reg-name" name="name" required minlength="2" placeholder="Sarah Jenkins" class="form-input pl-10 text-sm">
+                    <span class="valid-feedback-icon absolute inset-y-0 right-0 pr-3.5 flex items-center pointer-events-none text-emerald-500 hidden">
+                      <i class="fa-solid fa-circle-check text-sm"></i>
+                    </span>
+                  </div>
+                  <span class="error-text">Please enter your full name (at least 2 letters).</span>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group" id="group-reg-email">
+                  <label for="reg-email" class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">
+                    Email Address <span class="text-rose-500">*</span>
+                  </label>
+                  <div class="relative">
+                    <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                      <i class="fa-solid fa-envelope text-sm"></i>
+                    </span>
+                    <input type="email" id="reg-email" name="email" required placeholder="sarah@example.com" class="form-input pl-10 text-sm">
+                    <span class="valid-feedback-icon absolute inset-y-0 right-0 pr-3.5 flex items-center pointer-events-none text-emerald-500 hidden">
+                      <i class="fa-solid fa-circle-check text-sm"></i>
+                    </span>
+                  </div>
+                  <span class="error-text">Please enter a valid email address.</span>
+                </div>
+              </div>
+
+              <!-- Phone Number -->
+              <div class="form-group" id="group-reg-phone">
+                <label for="reg-phone" class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">
+                  Phone Number <span class="text-slate-400 font-normal lowercase">(for appointment SMS)</span>
+                </label>
+                <div class="relative">
+                  <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                    <i class="fa-solid fa-phone text-sm"></i>
+                  </span>
+                  <input type="tel" id="reg-phone" name="phone" placeholder="(800) 555-8453" class="form-input pl-10 text-sm">
+                  <span class="valid-feedback-icon absolute inset-y-0 right-0 pr-3.5 flex items-center pointer-events-none text-emerald-500 hidden">
+                    <i class="fa-solid fa-circle-check text-sm"></i>
+                  </span>
+                </div>
+                <span class="error-text">Please enter a valid phone number (at least 10 digits).</span>
+              </div>
+
+              <!-- Password & Password Strength Meter -->
+              <div class="form-group" id="group-reg-password">
+                <label for="reg-password" class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">
+                  Create Password <span class="text-rose-500">*</span>
+                </label>
+                <div class="password-wrapper">
+                  <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                    <i class="fa-solid fa-lock text-sm"></i>
+                  </span>
+                  <input type="password" id="reg-password" name="password" required minlength="8" placeholder="Minimum 8 characters" class="form-input pl-10 text-sm">
+                  <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility" data-target="reg-password">
+                    <i class="fa-solid fa-eye text-sm"></i>
+                  </button>
+                </div>
+
+                <!-- Interactive Strength Meter -->
+                <div class="password-strength-container pt-1">
+                  <div class="flex items-center justify-between text-[11px] font-bold">
+                    <span class="text-slate-500 dark:text-slate-400">Password Strength:</span>
+                    <span id="strength-label" class="text-slate-400">Enter a password</span>
+                  </div>
+                  <div class="strength-meter">
+                    <div id="strength-bar" class="strength-bar"></div>
+                  </div>
+                  <!-- 4 Requirement Chips -->
+                  <div class="grid grid-cols-2 gap-1.5 pt-2 text-[11px]">
+                    <div id="rule-length" class="text-slate-400 flex items-center gap-1.5">
+                      <i class="fa-solid fa-circle-xmark text-xs"></i> 8+ characters
+                    </div>
+                    <div id="rule-upper" class="text-slate-400 flex items-center gap-1.5">
+                      <i class="fa-solid fa-circle-xmark text-xs"></i> Uppercase letter
+                    </div>
+                    <div id="rule-number" class="text-slate-400 flex items-center gap-1.5">
+                      <i class="fa-solid fa-circle-xmark text-xs"></i> Number (0-9)
+                    </div>
+                    <div id="rule-special" class="text-slate-400 flex items-center gap-1.5">
+                      <i class="fa-solid fa-circle-xmark text-xs"></i> Special symbol (!@#)
+                    </div>
+                  </div>
+                </div>
+
+                <span class="error-text">Password must be at least 8 characters and meet requirements.</span>
+              </div>
+
+              <!-- Confirm Password -->
+              <div class="form-group" id="group-reg-confirm">
+                <label for="reg-confirm" class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">
+                  Confirm Password <span class="text-rose-500">*</span>
+                </label>
+                <div class="password-wrapper">
+                  <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                    <i class="fa-solid fa-lock-open text-sm"></i>
+                  </span>
+                  <input type="password" id="reg-confirm" name="confirm_password" required placeholder="Re-type password" class="form-input pl-10 text-sm">
+                  <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility" data-target="reg-confirm">
+                    <i class="fa-solid fa-eye text-sm"></i>
+                  </button>
+                </div>
+                <span class="error-text">Passwords do not match.</span>
+              </div>
+
+              <!-- Terms of Service Checkbox -->
+              <div class="form-group" id="group-reg-terms">
+                <label class="flex items-start gap-2.5 cursor-pointer text-xs text-slate-600 dark:text-slate-300 font-medium">
+                  <input type="checkbox" id="reg-terms" required class="w-4 h-4 rounded text-primary-600 focus:ring-primary-500 border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 mt-0.5">
+                  <span>
+                    I agree to AquaGleam's <a href="#" class="text-primary-600 dark:text-primary-400 font-bold hover:underline">Terms of Service</a>, <a href="#" class="text-primary-600 dark:text-primary-400 font-bold hover:underline">Privacy Policy</a>, and 5-Year ColorSeal™ warranty agreement.
+                  </span>
+                </label>
+                <span class="error-text">You must agree to the Terms of Service to register.</span>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" id="reg-submit-btn" class="btn btn-primary w-full py-3.5 text-sm font-black shadow-lg shadow-primary-500/25 flex items-center justify-center gap-2 mt-2">
+                <span>Create My Account</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </button>
+            </form>
+
+            <!-- Card Bottom Switcher -->
+            <div class="mt-6 pt-5 border-t border-slate-200 dark:border-slate-800 text-center text-xs text-slate-500 dark:text-slate-400">
+              Already have an AquaGleam account?
+              <a href="login.html" class="font-bold text-primary-600 dark:text-primary-400 hover:underline ml-1">Sign in here</a>
+            </div>
+
+            <!-- Security Footnote -->
+            <div class="mt-4 flex items-center justify-center gap-3 text-[11px] text-slate-400">
+              <span class="inline-flex items-center gap-1"><i class="fa-solid fa-lock text-emerald-500"></i> 256-Bit SSL Encrypted</span>
+              <span>&bull;</span>
+              <span class="inline-flex items-center gap-1"><i class="fa-solid fa-shield text-primary-500"></i> No Spam Guarantee</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="bg-slate-900 text-slate-300 border-t border-slate-800 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+        <!-- Company Info & Mission -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="index.html" class="inline-flex items-center gap-3">
+            <img src="../assets/images/logo.png" alt="AquaGleam Tile &amp; Grout Care" class="h-10 w-auto object-contain">
+          </a>
+          <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
+            America's premier commercial and residential bathroom tile cleaning, deep grout recoloring, and marble restoration company. Clean spaces, healthy families.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://www.facebook.com/login/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-primary-600 text-white flex items-center justify-center transition-colors" aria-label="Facebook Login"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+            <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-primary-600 text-white flex items-center justify-center transition-colors" aria-label="Instagram Login"><i class="fa-brands fa-instagram text-sm"></i></a>
+            <a href="https://accounts.google.com/ServiceLogin?service=youtube" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-primary-600 text-white flex items-center justify-center transition-colors" aria-label="YouTube Login"><i class="fa-brands fa-youtube text-sm"></i></a>
+            <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-primary-600 text-white flex items-center justify-center transition-colors" aria-label="LinkedIn Login"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+          </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white">Navigation</h4>
+          <ul class="text-sm space-y-2 text-slate-400">
+            <li><a href="index.html" class="hover:text-primary-400 transition-colors">Home Page</a></li>
+            <li><a href="about.html" class="hover:text-primary-400 transition-colors">About Our Team</a></li>
+            <li><a href="services.html" class="hover:text-primary-400 transition-colors">Services Catalog</a></li>
+            <li><a href="blog.html" class="hover:text-primary-400 transition-colors">Care Tips &amp; Blog</a></li>
+            <li><a href="contact.html" class="hover:text-primary-400 transition-colors">Contact &amp; Quotes</a></li>
+            <li><a href="login.html" class="hover:text-primary-400 transition-colors">Client Portal (Login)</a></li>
+            <li><a href="register.html" class="text-primary-400 font-bold transition-colors">Register Account</a></li>
+          </ul>
+        </div>
+
+        <!-- Restoration Services -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white">Core Services</h4>
+          <ul class="text-sm space-y-2 text-slate-400">
+            <li><a href="service-detail.html" class="hover:text-primary-400 transition-colors">Grout ColorSealing</a></li>
+            <li><a href="services.html#steam" class="hover:text-primary-400 transition-colors">230&deg;F Steam Clean</a></li>
+            <li><a href="services.html#silicone" class="hover:text-primary-400 transition-colors">Silicone Recaulking</a></li>
+            <li><a href="services.html#marble" class="hover:text-primary-400 transition-colors">Marble Honing</a></li>
+            <li><a href="services.html#epoxy" class="hover:text-primary-400 transition-colors">Epoxy Regrouting</a></li>
+          </ul>
+        </div>
+
+        <!-- Maintenance Newsletter -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white">Maintenance Newsletter</h4>
+          <p class="text-xs text-slate-400">Get bi-weekly tile care tips and secret seasonal discount coupons.</p>
+          <form class="validate-form space-y-2" id="footer-newsletter">
+            <div class="form-group">
+              <input type="email" placeholder="Your email address" required class="form-input text-xs bg-slate-800 border-slate-700 text-white placeholder-slate-500">
+            </div>
+            <button type="submit" class="btn btn-primary w-full text-xs py-2.5">
+              Subscribe Free
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Bottom Credits and Legal -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <div>
+          &copy; 2026 AquaGleam Tile &amp; Grout Restoration Inc. All rights reserved.
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:text-slate-400">Privacy Policy</a>
+          <span>&bull;</span>
+          <a href="#" class="hover:text-slate-400">Terms of Service</a>
+          <span>&bull;</span>
+          <a href="#" class="hover:text-slate-400">Warranty Registration</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const regForm = document.getElementById('register-form');
+      const nameInput = document.getElementById('reg-name');
+      const emailInput = document.getElementById('reg-email');
+      const phoneInput = document.getElementById('reg-phone');
+      const passwordInput = document.getElementById('reg-password');
+      const confirmInput = document.getElementById('reg-confirm');
+      const termsInput = document.getElementById('reg-terms');
+
+      const groupName = document.getElementById('group-reg-name');
+      const groupEmail = document.getElementById('group-reg-email');
+      const groupPhone = document.getElementById('group-reg-phone');
+      const groupPassword = document.getElementById('group-reg-password');
+      const groupConfirm = document.getElementById('group-reg-confirm');
+      const groupTerms = document.getElementById('group-reg-terms');
+
+      const strengthBar = document.getElementById('strength-bar');
+      const strengthLabel = document.getElementById('strength-label');
+      const ruleLength = document.getElementById('rule-length');
+      const ruleUpper = document.getElementById('rule-upper');
+      const ruleNumber = document.getElementById('rule-number');
+      const ruleSpecial = document.getElementById('rule-special');
+      const submitBtn = document.getElementById('reg-submit-btn');
+
+      // Password visibility toggles
+      document.querySelectorAll('.password-toggle-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetId = btn.getAttribute('data-target');
+          const input = document.getElementById(targetId);
+          const icon = btn.querySelector('i');
+          if (input.type === 'password') {
+            input.type = 'text';
+            icon.classList.remove('fa-eye');
+            icon.classList.add('fa-eye-slash');
+          } else {
+            input.type = 'password';
+            icon.classList.remove('fa-eye-slash');
+            icon.classList.add('fa-eye');
+          }
+        });
+      });
+
+      // Name Validation
+      function validateName() {
+        const val = nameInput.value.trim();
+        const icon = groupName.querySelector('.valid-feedback-icon');
+        if (val.length < 2) {
+          groupName.classList.add('has-error');
+          groupName.classList.remove('is-valid');
+          if (icon) icon.classList.add('hidden');
+          return false;
+        } else {
+          groupName.classList.remove('has-error');
+          groupName.classList.add('is-valid');
+          if (icon) icon.classList.remove('hidden');
+          return true;
+        }
+      }
+
+      // Email Validation
+      function validateEmail() {
+        const val = emailInput.value.trim();
+        const valid = /^[^s@]+@[^s@]+.[^s@]+$/.test(val);
+        const icon = groupEmail.querySelector('.valid-feedback-icon');
+        if (!valid) {
+          groupEmail.classList.add('has-error');
+          groupEmail.classList.remove('is-valid');
+          if (icon) icon.classList.add('hidden');
+          return false;
+        } else {
+          groupEmail.classList.remove('has-error');
+          groupEmail.classList.add('is-valid');
+          if (icon) icon.classList.remove('hidden');
+          return true;
+        }
+      }
+
+      // Phone Validation (Optional, but if filled, must be valid)
+      function validatePhone() {
+        const val = phoneInput.value.trim();
+        const icon = groupPhone.querySelector('.valid-feedback-icon');
+        if (!val) {
+          groupPhone.classList.remove('has-error', 'is-valid');
+          if (icon) icon.classList.add('hidden');
+          return true;
+        }
+        const cleaned = val.replace(/\D/g, '');
+        if (cleaned.length < 10) {
+          groupPhone.classList.add('has-error');
+          groupPhone.classList.remove('is-valid');
+          if (icon) icon.classList.add('hidden');
+          return false;
+        } else {
+          groupPhone.classList.remove('has-error');
+          groupPhone.classList.add('is-valid');
+          if (icon) icon.classList.remove('hidden');
+          return true;
+        }
+      }
+
+      // Interactive Password Strength Calculation
+      function updatePasswordStrength() {
+        const val = passwordInput.value;
+        const hasLength = val.length >= 8;
+        const hasUpper = /[A-Z]/.test(val);
+        const hasNumber = /[0-9]/.test(val);
+        const hasSpecial = /[^A-Za-z0-9]/.test(val);
+
+        // Update rule badges
+        updateRuleElement(ruleLength, hasLength);
+        updateRuleElement(ruleUpper, hasUpper);
+        updateRuleElement(ruleNumber, hasNumber);
+        updateRuleElement(ruleSpecial, hasSpecial);
+
+        let score = 0;
+        if (hasLength) score++;
+        if (hasUpper) score++;
+        if (hasNumber) score++;
+        if (hasSpecial) score++;
+
+        strengthBar.className = 'strength-bar';
+
+        if (!val) {
+          strengthLabel.textContent = 'Enter a password';
+          strengthLabel.className = 'text-slate-400';
+          groupPassword.classList.remove('has-error', 'is-valid');
+          return false;
+        }
+
+        if (score === 1) {
+          strengthBar.classList.add('weak');
+          strengthLabel.textContent = 'Weak';
+          strengthLabel.className = 'text-rose-500';
+          groupPassword.classList.add('has-error');
+          groupPassword.classList.remove('is-valid');
+          return false;
+        } else if (score === 2) {
+          strengthBar.classList.add('fair');
+          strengthLabel.textContent = 'Fair';
+          strengthLabel.className = 'text-amber-500';
+          groupPassword.classList.add('has-error');
+          groupPassword.classList.remove('is-valid');
+          return false;
+        } else if (score === 3) {
+          strengthBar.classList.add('good');
+          strengthLabel.textContent = 'Good';
+          strengthLabel.className = 'text-sky-500';
+          groupPassword.classList.remove('has-error');
+          groupPassword.classList.add('is-valid');
+          return true;
+        } else if (score === 4) {
+          strengthBar.classList.add('strong');
+          strengthLabel.textContent = 'Strong & Secure';
+          strengthLabel.className = 'text-emerald-500';
+          groupPassword.classList.remove('has-error');
+          groupPassword.classList.add('is-valid');
+          return true;
+        }
+        return false;
+      }
+
+      function updateRuleElement(el, valid) {
+        const icon = el.querySelector('i');
+        if (valid) {
+          el.className = 'text-emerald-600 dark:text-emerald-400 font-bold flex items-center gap-1.5';
+          icon.className = 'fa-solid fa-circle-check text-xs';
+        } else {
+          el.className = 'text-slate-400 flex items-center gap-1.5';
+          icon.className = 'fa-solid fa-circle-xmark text-xs';
+        }
+      }
+
+      // Confirm Password Match
+      function validateConfirm() {
+        const pass = passwordInput.value;
+        const conf = confirmInput.value;
+        if (!conf || pass !== conf) {
+          groupConfirm.classList.add('has-error');
+          groupConfirm.classList.remove('is-valid');
+          return false;
+        } else {
+          groupConfirm.classList.remove('has-error');
+          groupConfirm.classList.add('is-valid');
+          return true;
+        }
+      }
+
+      // Terms agreement
+      function validateTerms() {
+        if (!termsInput.checked) {
+          groupTerms.classList.add('has-error');
+          return false;
+        } else {
+          groupTerms.classList.remove('has-error');
+          return true;
+        }
+      }
+
+      // Event listeners
+      nameInput.addEventListener('input', validateName);
+      nameInput.addEventListener('blur', validateName);
+      emailInput.addEventListener('input', validateEmail);
+      emailInput.addEventListener('blur', validateEmail);
+      phoneInput.addEventListener('input', validatePhone);
+      phoneInput.addEventListener('blur', validatePhone);
+      passwordInput.addEventListener('input', () => {
+        updatePasswordStrength();
+        if (confirmInput.value) validateConfirm();
+      });
+      confirmInput.addEventListener('input', validateConfirm);
+      confirmInput.addEventListener('blur', validateConfirm);
+      termsInput.addEventListener('change', validateTerms);
+
+      // Submit Form
+      regForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const vName = validateName();
+        const vEmail = validateEmail();
+        const vPhone = validatePhone();
+        const vPass = updatePasswordStrength();
+        const vConf = validateConfirm();
+        const vTerms = validateTerms();
+
+        if (!vName) { nameInput.focus(); return; }
+        if (!vEmail) { emailInput.focus(); return; }
+        if (!vPhone) { phoneInput.focus(); return; }
+        if (!vPass) { passwordInput.focus(); return; }
+        if (!vConf) { confirmInput.focus(); return; }
+        if (!vTerms) { termsInput.focus(); return; }
+
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Creating Account...';
+
+        setTimeout(() => {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> Account Created!';
+          submitBtn.classList.remove('btn-primary');
+          submitBtn.classList.add('bg-emerald-600', 'text-white');
+
+          if (typeof showToast === 'function') {
+            showToast('Account created successfully! Redirecting to sign in...', 'success');
+          }
+
+          setTimeout(() => {
+            window.location.href = 'login.html?registered=true';
+          }, 1500);
+        }, 1300);
+      });
+    });
+  </script>
+</body>
+</html>

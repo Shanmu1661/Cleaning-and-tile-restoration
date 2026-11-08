@@ -1022,3 +1022,83 @@ html.dark .matrix-card-solid,
   border: 1px solid rgba(51, 65, 85, 0.8) !important;
   box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.5) !important;
 }
+
+
+/* --- 17. Authentication & Client Portal Form Utilities --- */
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper .form-input {
+  padding-right: 2.75rem;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #94a3b8;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  transition: color 0.2s ease;
+  z-index: 2;
+}
+
+.password-toggle-btn:hover {
+  color: var(--primary);
+}
+
+.password-strength-container {
+  margin-top: 0.5rem;
+}
+
+.strength-meter {
+  height: 6px;
+  border-radius: 9999px;
+  background-color: #e2e8f0;
+  overflow: hidden;
+  margin-top: 0.35rem;
+}
+
+.strength-bar {
+  height: 100%;
+  width: 0%;
+  border-radius: 9999px;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.strength-bar.weak {
+  width: 25%;
+  background-color: #ef4444;
+}
+
+.strength-bar.fair {
+  width: 50%;
+  background-color: #f59e0b;
+}
+
+.strength-bar.good {
+  width: 75%;
+  background-color: #3b82f6;
+}
+
+.strength-bar.strong {
+  width: 100%;
+  background-color: #10b981;
+}
+
+.auth-tab-btn {
+  transition: all 0.2s ease;
+}
+
+.auth-tab-btn.active {
+  background-color: #0284c7;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+}

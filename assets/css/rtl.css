@@ -84,3 +84,15 @@
   right: 0;
   left: auto;
 }
+
+
+/* Password toggle position in RTL */
+[dir="rtl"] .password-wrapper .form-input {
+  padding-right: 1.15rem;
+  padding-left: 2.75rem;
+}
+
+[dir="rtl"] .password-toggle-btn {
+  right: auto;
+  left: 0.85rem;
+}

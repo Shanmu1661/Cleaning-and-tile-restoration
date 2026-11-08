@@ -86,3 +86,23 @@ html.dark .before-after-handle {
   color: #38bdf8;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6), 0 0 20px rgba(56, 189, 248, 0.8);
 }
+
+
+/* Auth & Password utilities in dark mode */
+html.dark .form-group.has-error .form-input {
+  border-color: #ef4444;
+  background-color: #2b1115;
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.2);
+}
+
+html.dark .strength-meter {
+  background-color: #1e293b;
+}
+
+html.dark .auth-tab-btn:not(.active) {
+  color: #94a3b8;
+}
+
+html.dark .auth-tab-btn:not(.active):hover {
+  color: #f8fafc;
+}
