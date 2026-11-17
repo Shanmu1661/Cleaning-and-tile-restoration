@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initModals();
   initForms();
   initBackToTop();
+  initPhotoUpload();
 });
 
 /* ==========================================================================
@@ -533,5 +534,203 @@ function initHeroVideo() {
 
   if (!video.paused) {
     updatePlayState(true);
+  }
+}
+
+/* ==========================================================================
+   11. Interactive Photo Upload Dropzone
+   ========================================================================== */
+function initPhotoUpload() {
+  const dropzone = document.getElementById('photo-dropzone');
+  const fileInput = document.getElementById('bathroom-photos-input');
+  const previewContainer = document.getElementById('photo-preview-container');
+  const previewGrid = document.getElementById('photo-preview-grid');
+  const countBadge = document.getElementById('photo-count-badge');
+  const clearAllBtn = document.getElementById('photo-clear-all');
+  const contactForm = document.getElementById('main-contact-form');
+
+  if (!dropzone || !fileInput) return;
+
+  const MAX_TOTAL_SIZE = 25 * 1024 * 1024; // 25MB
+  const MAX_SINGLE_SIZE = 15 * 1024 * 1024; // 15MB
+  let attachedFiles = [];
+
+  function formatBytes(bytes) {
+    if (bytes === 0) return '0 B';
+    const k = 1024;
+    const sizes = ['B', 'KB', 'MB', 'GB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
+  }
+
+  function syncDataTransfer() {
+    try {
+      const dt = new DataTransfer();
+      attachedFiles.forEach(f => dt.items.add(f));
+      fileInput.files = dt.files;
+    } catch (e) {
+      // DataTransfer may be unsupported in some environments
+    }
+  }
+
+  function renderPreviews() {
+    if (!previewContainer || !previewGrid) return;
+
+    if (attachedFiles.length === 0) {
+      previewContainer.classList.add('hidden');
+      previewGrid.innerHTML = '';
+      return;
+    }
+
+    previewContainer.classList.remove('hidden');
+    previewGrid.innerHTML = '';
+
+    const totalBytes = attachedFiles.reduce((acc, f) => acc + f.size, 0);
+    if (countBadge) {
+      countBadge.innerHTML = `<i class="fa-solid fa-images"></i> <span>${attachedFiles.length} photo${attachedFiles.length > 1 ? 's' : ''} attached (${formatBytes(totalBytes)} of 25MB)</span>`;
+    }
+
+    attachedFiles.forEach((file, index) => {
+      const card = document.createElement('div');
+      card.className = 'relative group rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-1.5 shadow-sm transition-all hover:shadow-md';
+
+      const thumbUrl = URL.createObjectURL(file);
+
+      card.innerHTML = `
+        <div class="w-full h-20 rounded-lg overflow-hidden bg-slate-100 dark:bg-slate-900 relative">
+          <img src="${thumbUrl}" alt="${file.name}" class="w-full h-full object-cover">
+          <button type="button" data-index="${index}" class="remove-photo-btn absolute top-1 right-1 w-6 h-6 rounded-full bg-slate-900/80 hover:bg-rose-600 text-white flex items-center justify-center text-xs shadow-md transition-colors" title="Remove photo" aria-label="Remove photo">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="mt-1 px-1">
+          <p class="text-[11px] font-bold text-slate-800 dark:text-slate-200 truncate leading-tight">${file.name}</p>
+          <p class="text-[10px] text-slate-400 font-medium">${formatBytes(file.size)}</p>
+        </div>
+      `;
+
+      const removeBtn = card.querySelector('.remove-photo-btn');
+      removeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        URL.revokeObjectURL(thumbUrl);
+        removeFile(index);
+      });
+
+      previewGrid.appendChild(card);
+    });
+  }
+
+  function removeFile(index) {
+    attachedFiles.splice(index, 1);
+    syncDataTransfer();
+    renderPreviews();
+    if (typeof showToast === 'function') {
+      showToast('Photo removed.', 'info', 2000);
+    }
+  }
+
+  function handleFiles(files) {
+    const fileList = Array.from(files);
+    if (fileList.length === 0) return;
+
+    let addedCount = 0;
+    let currentTotal = attachedFiles.reduce((acc, f) => acc + f.size, 0);
+
+    for (const file of fileList) {
+      const isImage = file.type.startsWith('image/') || /\.(jpe?g|png|webp|heic|gif)$/i.test(file.name);
+      if (!isImage) {
+        if (typeof showToast === 'function') {
+          showToast(`"${file.name}" is not an image file. Only JPG, PNG, WEBP, and HEIC are supported.`, 'danger');
+        }
+        continue;
+      }
+
+      if (file.size > MAX_SINGLE_SIZE) {
+        if (typeof showToast === 'function') {
+          showToast(`"${file.name}" exceeds the 15MB single file limit.`, 'danger');
+        }
+        continue;
+      }
+
+      if (currentTotal + file.size > MAX_TOTAL_SIZE) {
+        if (typeof showToast === 'function') {
+          showToast('Total photo upload limit of 25MB reached.', 'danger');
+        }
+        break;
+      }
+
+      const isDuplicate = attachedFiles.some(f => f.name === file.name && f.size === file.size);
+      if (isDuplicate) continue;
+
+      attachedFiles.push(file);
+      currentTotal += file.size;
+      addedCount++;
+    }
+
+    if (addedCount > 0) {
+      syncDataTransfer();
+      renderPreviews();
+      if (typeof showToast === 'function') {
+        showToast(`${addedCount} photo${addedCount > 1 ? 's' : ''} added successfully!`, 'success');
+      }
+    }
+  }
+
+  dropzone.addEventListener('click', () => {
+    fileInput.click();
+  });
+
+  dropzone.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      fileInput.click();
+    }
+  });
+
+  fileInput.addEventListener('change', (e) => {
+    handleFiles(e.target.files);
+    fileInput.value = '';
+  });
+
+  ['dragenter', 'dragover'].forEach(eventName => {
+    dropzone.addEventListener(eventName, (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dropzone.classList.add('border-primary-500', 'bg-primary-50/60', 'dark:bg-primary-950/40');
+    });
+  });
+
+  ['dragleave', 'drop'].forEach(eventName => {
+    dropzone.addEventListener(eventName, (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dropzone.classList.remove('border-primary-500', 'bg-primary-50/60', 'dark:bg-primary-950/40');
+    });
+  });
+
+  dropzone.addEventListener('drop', (e) => {
+    if (e.dataTransfer && e.dataTransfer.files) {
+      handleFiles(e.dataTransfer.files);
+    }
+  });
+
+  if (clearAllBtn) {
+    clearAllBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      attachedFiles = [];
+      syncDataTransfer();
+      renderPreviews();
+      if (typeof showToast === 'function') {
+        showToast('All attached photos cleared.', 'info', 2000);
+      }
+    });
+  }
+
+  if (contactForm) {
+    contactForm.addEventListener('reset', () => {
+      attachedFiles = [];
+      syncDataTransfer();
+      renderPreviews();
+    });
   }
 }

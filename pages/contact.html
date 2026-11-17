@@ -38,6 +38,7 @@
               700: '#075985',
               800: '#0c4a6e',
               900: '#082f49',
+              950: '#031a2b',
             },
             secondary: {
               50: '#f0fdfa',
@@ -48,6 +49,7 @@
               500: '#0d9488',
               600: '#0f766e',
               700: '#115e59',
+              950: '#042f2c',
             },
             accent: {
               400: '#fbbf24',
@@ -240,7 +242,7 @@
                   <i class="fa-solid fa-phone"></i>
                 </div>
                 <div>
-                  <span class="block text-xs text-slate-400 font-extrabold uppercase tracking-wider">Toll-Free Hotline</span>
+                  <span class="block text-xs text-slate-500 dark:text-slate-400 font-extrabold uppercase tracking-wider">Toll-Free Hotline</span>
                   <a href="tel:18005558453" class="font-black text-base text-slate-900 dark:text-white hover:text-primary-600">(800) 555-TILE (8453)</a>
                   <span class="text-[11px] text-emerald-600 dark:text-emerald-400 block font-bold">Available 24/7 for floods</span>
                 </div>
@@ -251,9 +253,9 @@
                   <i class="fa-brands fa-whatsapp"></i>
                 </div>
                 <div>
-                  <span class="block text-xs text-slate-400 font-extrabold uppercase tracking-wider">WhatsApp Photo Diagnostic</span>
+                  <span class="block text-xs text-slate-500 dark:text-slate-400 font-extrabold uppercase tracking-wider">WhatsApp Photo Diagnostic</span>
                   <a href="https://wa.me/18005558453" target="_blank" rel="noopener noreferrer" class="font-black text-base text-slate-900 dark:text-white hover:text-primary-600">+1 (800) 555-8453</a>
-                  <span class="text-[11px] text-slate-500 block">Send tile photos for 15-min estimate</span>
+                  <span class="text-[11px] text-slate-600 dark:text-slate-400 block font-medium">Send tile photos for 15-min estimate</span>
                 </div>
               </div>
 
@@ -262,9 +264,9 @@
                   <i class="fa-solid fa-envelope"></i>
                 </div>
                 <div>
-                  <span class="block text-xs text-slate-400 font-extrabold uppercase tracking-wider">Email Estimates</span>
+                  <span class="block text-xs text-slate-500 dark:text-slate-400 font-extrabold uppercase tracking-wider">Email Estimates</span>
                   <a href="mailto:estimates@aquagleamrestoration.com" class="font-black text-base text-slate-900 dark:text-white hover:text-primary-600">estimates@aquagleam.com</a>
-                  <span class="text-[11px] text-slate-500 block">Detailed commercial RFP inquiries</span>
+                  <span class="text-[11px] text-slate-600 dark:text-slate-400 block font-medium">Detailed commercial RFP inquiries</span>
                 </div>
               </div>
             </div>
@@ -289,10 +291,10 @@
             </div>
 
             <!-- Regional Service Hubs -->
-            <div class="bg-gradient-to-br from-slate-900 to-primary-950 text-white p-7 rounded-3xl shadow-xl space-y-3 border border-primary-500/30">
-              <span class="badge bg-primary-800 text-primary-200 text-[10px]">Territory Coverage</span>
-              <h4 class="font-display font-black text-lg">Regional Mobile Fleet</h4>
-              <p class="text-xs text-slate-300 leading-relaxed font-normal">
+            <div class="bg-slate-900 bg-gradient-to-br from-slate-900 via-slate-950 to-primary-950 text-white p-7 rounded-3xl shadow-xl space-y-3 border border-primary-500/30">
+              <span class="badge bg-primary-800 text-primary-200 text-[10px] font-bold">Territory Coverage</span>
+              <h4 class="font-display font-black text-lg text-white">Regional Mobile Fleet</h4>
+              <p class="text-xs text-slate-200 leading-relaxed font-medium">
                 Operating 14 mobile steam extraction units servicing Greater Metro Area, North Suburbs, and South Bay districts.
               </p>
             </div>
@@ -307,7 +309,7 @@
                 <h2 class="font-display text-2xl sm:text-3xl font-black text-slate-950 dark:text-white">
                   Request an Instant Diagnostic & Quote
                 </h2>
-                <p class="text-xs text-slate-500 mt-1">
+                <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 font-medium">
                   Fill out your details below and our stone specialist will review your request.
                 </p>
               </div>
@@ -349,18 +351,35 @@
                   </div>
                 </div>
 
-                <!-- Simulated Tile Photo Upload Dropzone -->
-                <div>
-                  <label class="block text-xs font-black uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1">
+                <!-- Tile Photo Upload Dropzone -->
+                <div class="photo-upload-container">
+                  <label for="bathroom-photos-input" class="block text-xs font-black uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1">
                     Upload Bathroom Photos (Optional - Helps Us Provide Accurate Fixed Pricing)
                   </label>
-                  <div class="p-6 border-2 border-dashed border-slate-300 dark:border-slate-700 rounded-2xl text-center bg-white dark:bg-slate-900 cursor-pointer hover:border-primary-500 transition-colors shadow-sm">
-                    <i class="fa-solid fa-cloud-arrow-up text-3xl text-primary-500 mb-2"></i>
-                    <p class="text-xs font-black text-slate-800 dark:text-slate-200">
-                      Drag & Drop your photos here or <span class="text-primary-600 underline">browse files</span>
-                    </p>
-                    <p class="text-[10px] text-slate-400 mt-1">Supports JPG, PNG, HEIC up to 25MB total</p>
-                    <input type="file" class="hidden" multiple accept="image/*">
+                  <div id="photo-dropzone" class="relative p-6 sm:p-7 border-2 border-dashed border-slate-300 dark:border-slate-700 hover:border-primary-500 dark:hover:border-primary-400 rounded-2xl text-center bg-slate-50/60 dark:bg-slate-900/60 cursor-pointer transition-all duration-200 shadow-sm group focus:outline-none focus:ring-2 focus:ring-primary-500" tabindex="0" role="button" aria-label="Upload bathroom photos">
+                    <input type="file" id="bathroom-photos-input" name="bathroom_photos" class="hidden" multiple accept="image/jpeg,image/png,image/webp,image/heic,image/*">
+                    <div id="dropzone-default-prompt">
+                      <div class="w-12 h-12 rounded-2xl bg-primary-50 dark:bg-primary-950/80 text-primary-600 dark:text-primary-400 flex items-center justify-center mx-auto mb-2 text-2xl shadow-sm group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                      </div>
+                      <p class="text-xs font-black text-slate-800 dark:text-slate-200">
+                        Drag &amp; Drop your photos here or <span class="text-primary-600 dark:text-primary-400 underline font-extrabold">browse files</span>
+                      </p>
+                      <p class="text-[10px] text-slate-500 dark:text-slate-400 mt-1 font-semibold">Supports JPG, PNG, WEBP, HEIC up to 25MB total</p>
+                    </div>
+                  </div>
+
+                  <!-- Uploaded Files Preview Grid -->
+                  <div id="photo-preview-container" class="mt-3 hidden space-y-2">
+                    <div class="flex items-center justify-between text-xs font-bold text-slate-600 dark:text-slate-400 px-1">
+                      <span id="photo-count-badge" class="inline-flex items-center gap-1.5 text-primary-600 dark:text-primary-400">
+                        <i class="fa-solid fa-images"></i> <span>0 photos attached</span>
+                      </span>
+                      <button type="button" id="photo-clear-all" class="text-slate-400 hover:text-rose-500 dark:hover:text-rose-400 text-[11px] font-bold transition-colors">
+                        Clear all
+                      </button>
+                    </div>
+                    <div id="photo-preview-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-2.5"></div>
                   </div>
                 </div>
 
@@ -375,7 +394,7 @@
                   <i class="fa-solid fa-paper-plane"></i> Send Free Diagnostic Request
                 </button>
 
-                <p class="text-[11px] text-center text-slate-400">
+                <p class="text-[11px] text-center text-slate-500 dark:text-slate-400 font-medium">
                   We respect your privacy. No spam. You will receive a direct estimate from a master technician.
                 </p>
               </form>

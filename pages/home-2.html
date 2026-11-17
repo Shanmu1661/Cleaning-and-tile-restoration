@@ -154,10 +154,9 @@
           <i class="fa-solid fa-moon text-sm hidden dark:inline"></i>
         </button>
 
-                <!-- Login Navigation Button (Uniform Shape) -->
-        <a href="login.html" class="hidden sm:inline-flex items-center gap-2 h-10 px-4 rounded-xl bg-primary-600 hover:bg-primary-700 text-white text-xs font-bold shadow-md shadow-primary-500/20 transition-all hover:-translate-y-0.5" aria-label="Sign In to Account">
-          <i class="fa-solid fa-arrow-right-to-bracket text-xs"></i>
-          <span>Login</span>
+        <!-- CTA Button -->
+        <a href="contact.html" class="hidden sm:inline-flex btn btn-primary text-xs py-2.5 px-5 font-bold shadow-md shadow-primary-500/20">
+          <i class="fa-solid fa-calendar-check"></i> Schedule Stone Audit
         </a>
 
         <!-- Mobile Menu Toggle Button -->
@@ -169,71 +168,62 @@
     </div>
   </header>
 
-    <!-- Mobile Drawer (Matches Desktop Navbar 1:1) -->
-  <div id="mobile-backdrop" class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 hidden transition-opacity"></div>
-  <aside id="mobile-nav-menu" class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-white dark:bg-[#0c121e] border-l border-slate-200 dark:border-slate-800 p-6 z-50 shadow-2xl translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between overflow-y-auto" aria-label="Mobile Navigation">
+  <!-- Mobile Drawer -->
+  <div id="mobile-backdrop" class="fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+  <aside id="mobile-nav-menu" class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-white dark:bg-slate-900 border-l border-slate-200 dark:border-slate-800 p-6 z-50 shadow-2xl translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between overflow-y-auto" aria-label="Mobile Navigation">
     <div>
       <div class="flex items-center justify-between pb-6 border-b border-slate-200 dark:border-slate-800">
-        <a href="index.html" class="inline-flex items-center">
-          <img src="../assets/images/logo.png" alt="AquaGleam Tile &amp; Grout Care" class="h-8 w-auto object-contain">
+        <a href="index.html" class="flex items-center gap-2">
+          <img src="../assets/images/logo.png" alt="AquaGleam™ Tile & Grout Care" class="h-8 w-auto object-contain">
         </a>
         <button type="button" id="mobile-menu-close" class="p-2 text-slate-500 hover:text-slate-800 dark:hover:text-white" aria-label="Close menu">
           <i class="fa-solid fa-xmark text-lg"></i>
         </button>
       </div>
-      <nav class="py-6 space-y-2 font-bold text-sm">
-        <a href="index.html" class="flex items-center gap-3 px-3.5 py-3 rounded-xl transition-colors bg-primary-50 dark:bg-primary-950/60 text-primary-600 dark:text-primary-400 font-extrabold">
-          <i class="fa-solid fa-house w-5 text-primary-500"></i>
-          <span>Home</span>
-        </a>
-        <a href="about.html" class="flex items-center gap-3 px-3.5 py-3 rounded-xl transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">
-          <i class="fa-solid fa-circle-info w-5 text-teal-500"></i>
-          <span>About Us</span>
-        </a>
-        <a href="services.html" class="flex items-center gap-3 px-3.5 py-3 rounded-xl transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">
-          <i class="fa-solid fa-spray-can-sparkles w-5 text-amber-500"></i>
-          <span>Services</span>
-        </a>
-        <a href="blog.html" class="flex items-center gap-3 px-3.5 py-3 rounded-xl transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">
-          <i class="fa-solid fa-newspaper w-5 text-rose-500"></i>
-          <span>Care Tips</span>
-        </a>
-        <a href="contact.html" class="flex items-center gap-3 px-3.5 py-3 rounded-xl transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200">
-          <i class="fa-solid fa-envelope w-5 text-sky-500"></i>
-          <span>Contact</span>
-        </a>
+
+      <nav class="py-6 space-y-3 font-semibold text-slate-700 dark:text-slate-200">
+        <div class="space-y-1 pb-2 border-b border-slate-200 dark:border-slate-800">
+          <div class="text-[10px] uppercase font-black tracking-wider text-slate-400 px-3.5 pt-1">Home Layouts</div>
+          <a href="index.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200">
+            <i class="fa-solid fa-house w-4 text-primary-500"></i> Home 1: Tile & Grout Master
+          </a>
+          <a href="home-2.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 text-xs font-bold">
+            <i class="fa-solid fa-gem w-4 text-amber-500"></i> Home 2: Luxury Stone (Niche)
+          </a>
+        </div>
+        <a href="about.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fa-solid fa-circle-info w-4 text-cyan-500"></i> About Us</a>
+        <a href="services.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fa-solid fa-spray-can-sparkles w-4 text-teal-500"></i> Services</a>
+        <a href="contact.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fa-solid fa-envelope w-4 text-sky-500"></i> Contact</a>
       </nav>
     </div>
-    <div class="pt-4 border-t border-slate-200 dark:border-slate-800">
-      <a href="login.html" class="btn btn-primary w-full h-11 rounded-xl text-xs font-bold shadow-md flex items-center justify-center gap-2">
-        <i class="fa-solid fa-arrow-right-to-bracket text-xs"></i>
-        <span>Login</span>
-      </a>
+
+    <div class="pt-6 border-t border-slate-200 dark:border-slate-800 space-y-3">
+      <a href="contact.html" class="btn btn-primary w-full shadow-lg"><i class="fa-solid fa-envelope"></i> Request Consultation</a>
     </div>
   </aside>
 
   <!-- MAIN NICHE CONTENT -->
   <main id="main-content">
     <!-- Hero Section: Luxury Stone & Diamond Honing Specialist with Prominent Background -->
-    <section class="relative min-h-[540px] lg:min-h-[600px] flex items-center py-10 lg:py-14 overflow-hidden bg-cover bg-center bg-no-repeat border-b border-slate-200 dark:border-slate-800" style="background-image: url('../assets/images/stone-workflow-bg.jpg');">
+    <section class="relative pt-10 pb-16 lg:pt-16 lg:pb-24 overflow-hidden bg-cover bg-center bg-no-repeat border-b border-slate-200 dark:border-slate-800" style="background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1920&q=80');">
       
       <!-- Master Directional Clarity Scrim:
            Guarantees 100% razor-sharp text legibility across the entire left value column (0-55%) in both Light and Dark modes,
            smoothly fading to transparent on the right (65-85%) so the luxury background and video showcase remain vibrant -->
       <div class="stone-hero-scrim"></div>
 
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           <!-- Left Column: Niche Value Proposition (Direct text on canvas, no bulky card box) -->
-          <div class="lg:col-span-7 space-y-4 text-center lg:text-start">
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-start">
             
             <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/15 dark:bg-amber-950/50 border border-amber-500/40 dark:border-amber-500/50 text-amber-900 dark:text-amber-300 text-xs font-black uppercase tracking-wider shadow-sm">
               <i class="fa-solid fa-gem text-amber-600 dark:text-amber-400"></i>
               <span>High-End Stone Division &bull; Diamond Honing &amp; Vitrification</span>
             </div>
 
-            <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 dark:text-white tracking-tight leading-[1.12]">
+            <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-slate-950 dark:text-white tracking-tight leading-[1.12]">
               Architectural Marble Honing &amp; <span class="bg-gradient-to-r from-primary-600 via-cyan-500 to-teal-500 bg-clip-text text-transparent">Precision Vitrification</span>
             </h1>
 
@@ -242,7 +232,7 @@
             </p>
 
             <!-- Value Metric Numbers (High-Contrast Glassmorphic Micro-Cards for 100% Guaranteed Legibility) -->
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-3.5 border-t border-slate-300/80 dark:border-slate-700/80 max-w-xl mx-auto lg:mx-0">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-5 border-t border-slate-300/80 dark:border-slate-700/80 max-w-xl mx-auto lg:mx-0">
               <div class="p-3.5 sm:p-4 rounded-2xl bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200/90 dark:border-slate-700/80 shadow-md">
                 <span class="font-display font-black text-2xl sm:text-3xl text-cyan-600 dark:text-cyan-400 block tracking-tight">10,000</span>
                 <span class="text-[11px] sm:text-xs uppercase font-black text-slate-800 dark:text-slate-100 tracking-wider block mt-1 leading-tight">Grit Mirror Finish</span>
@@ -501,67 +491,71 @@
         <!-- 4 Symptom Diagnostic Cards -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
           
-          <div class="glass-card gradient-border-card p-6 rounded-2xl space-y-4 hover:-translate-y-1 transition-transform text-center flex flex-col justify-between h-full">
-            <div class="space-y-4 flex flex-col items-center text-center">
-              <div class="w-12 h-12 rounded-xl mx-auto bg-amber-500/10 border border-amber-500/30 text-amber-500 flex items-center justify-center text-xl shadow-sm">
+          <!-- Card 1 -->
+          <div class="glass-card gradient-border-card p-6 rounded-2xl hover:-translate-y-1 transition-transform text-center flex flex-col justify-between h-full">
+            <div class="space-y-4 flex flex-col items-center text-center flex-1 justify-start">
+              <div class="w-12 h-12 rounded-xl mx-auto bg-amber-500/10 border border-amber-500/30 text-amber-500 flex items-center justify-center text-xl shadow-sm shrink-0">
                 <i class="fa-solid fa-lemon"></i>
               </div>
-              <div>
-                <h3 class="font-display font-black text-lg text-slate-900 dark:text-white min-h-[56px] flex items-center justify-center text-center">Acid Etch Rings</h3>
-                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 min-h-[50px] text-center">White, cloudy rings caused by perfume, citrus, wine, or vinegar reacting with calcite (CaCO₃).</p>
+              <div class="w-full">
+                <h3 class="font-display font-black text-lg text-slate-900 dark:text-white min-h-[3.25rem] sm:min-h-[3.5rem] flex items-center justify-center text-center leading-snug">Acid Etch Rings</h3>
+                <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 min-h-[4.25rem] sm:min-h-[4.5rem] flex items-center justify-center text-center leading-relaxed">White, cloudy rings caused by perfume, citrus, wine, or vinegar reacting with calcite (CaCO₃).</p>
               </div>
             </div>
-            <div class="pt-3 border-t border-slate-200 dark:border-slate-800 space-y-1.5 text-xs mt-auto w-full text-center">
-              <div class="font-bold text-amber-600 dark:text-amber-400">Protocol: Micro-Hone 800</div>
-              <div class="text-slate-500 dark:text-slate-400">Zero material loss; recalibrates optical flatness.</div>
+            <div class="pt-3.5 mt-4 border-t border-slate-200 dark:border-slate-800 space-y-1.5 text-xs w-full text-center shrink-0">
+              <div class="font-bold text-amber-600 dark:text-amber-400 min-h-[2.25rem] flex items-center justify-center leading-tight">Protocol: Micro-Hone 800</div>
+              <div class="text-slate-500 dark:text-slate-400 min-h-[2.25rem] flex items-center justify-center leading-tight">Zero material loss; recalibrates optical flatness.</div>
             </div>
           </div>
 
-          <div class="glass-card gradient-border-card p-6 rounded-2xl space-y-4 hover:-translate-y-1 transition-transform text-center flex flex-col justify-between h-full">
-            <div class="space-y-4 flex flex-col items-center text-center">
-              <div class="w-12 h-12 rounded-xl mx-auto bg-cyan-500/10 border border-cyan-500/30 text-cyan-500 flex items-center justify-center text-xl shadow-sm">
+          <!-- Card 2 -->
+          <div class="glass-card gradient-border-card p-6 rounded-2xl hover:-translate-y-1 transition-transform text-center flex flex-col justify-between h-full">
+            <div class="space-y-4 flex flex-col items-center text-center flex-1 justify-start">
+              <div class="w-12 h-12 rounded-xl mx-auto bg-cyan-500/10 border border-cyan-500/30 text-cyan-500 flex items-center justify-center text-xl shadow-sm shrink-0">
                 <i class="fa-solid fa-shoe-prints"></i>
               </div>
-              <div>
-                <h3 class="font-display font-black text-lg text-slate-900 dark:text-white min-h-[56px] flex items-center justify-center text-center">Dull Traffic Lanes</h3>
-                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 min-h-[50px] text-center">Microscopic grit abrasion scratching the polish where foot traffic is highest.</p>
+              <div class="w-full">
+                <h3 class="font-display font-black text-lg text-slate-900 dark:text-white min-h-[3.25rem] sm:min-h-[3.5rem] flex items-center justify-center text-center leading-snug">Dull Traffic Lanes</h3>
+                <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 min-h-[4.25rem] sm:min-h-[4.5rem] flex items-center justify-center text-center leading-relaxed">Microscopic grit abrasion scratching the polish where foot traffic is highest.</p>
               </div>
             </div>
-            <div class="pt-3 border-t border-slate-200 dark:border-slate-800 space-y-1.5 text-xs mt-auto w-full text-center">
-              <div class="font-bold text-cyan-600 dark:text-cyan-400">Protocol: 3-Stage Diamond Hone</div>
-              <div class="text-slate-500 dark:text-slate-400">Progressive 400 &rarr; 1,500 &rarr; 3,000 grit finish.</div>
+            <div class="pt-3.5 mt-4 border-t border-slate-200 dark:border-slate-800 space-y-1.5 text-xs w-full text-center shrink-0">
+              <div class="font-bold text-cyan-600 dark:text-cyan-400 min-h-[2.25rem] flex items-center justify-center leading-tight">Protocol: 3-Stage Diamond Hone</div>
+              <div class="text-slate-500 dark:text-slate-400 min-h-[2.25rem] flex items-center justify-center leading-tight">Progressive 400 &rarr; 1,500 &rarr; 3,000 grit finish.</div>
             </div>
           </div>
 
-          <div class="glass-card gradient-border-card p-6 rounded-2xl space-y-4 hover:-translate-y-1 transition-transform text-center flex flex-col justify-between h-full">
-            <div class="space-y-4 flex flex-col items-center text-center">
-              <div class="w-12 h-12 rounded-xl mx-auto bg-rose-500/10 border border-rose-500/30 text-rose-500 flex items-center justify-center text-xl shadow-sm">
+          <!-- Card 3 -->
+          <div class="glass-card gradient-border-card p-6 rounded-2xl hover:-translate-y-1 transition-transform text-center flex flex-col justify-between h-full">
+            <div class="space-y-4 flex flex-col items-center text-center flex-1 justify-start">
+              <div class="w-12 h-12 rounded-xl mx-auto bg-rose-500/10 border border-rose-500/30 text-rose-500 flex items-center justify-center text-xl shadow-sm shrink-0">
                 <i class="fa-solid fa-oil-can"></i>
               </div>
-              <div>
-                <h3 class="font-display font-black text-lg text-slate-900 dark:text-white min-h-[56px] flex items-center justify-center text-center">Deep Oil & Dye Stains</h3>
-                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 min-h-[50px] text-center">Liquid absorbed deep into the porous stone capillaries beneath surface sealer.</p>
+              <div class="w-full">
+                <h3 class="font-display font-black text-lg text-slate-900 dark:text-white min-h-[3.25rem] sm:min-h-[3.5rem] flex items-center justify-center text-center leading-snug">Deep Oil & Dye Stains</h3>
+                <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 min-h-[4.25rem] sm:min-h-[4.5rem] flex items-center justify-center text-center leading-relaxed">Liquid absorbed deep into the porous stone capillaries beneath surface sealer.</p>
               </div>
             </div>
-            <div class="pt-3 border-t border-slate-200 dark:border-slate-800 space-y-1.5 text-xs mt-auto w-full text-center">
-              <div class="font-bold text-rose-600 dark:text-rose-400">Protocol: Chemical Poultice Extraction</div>
-              <div class="text-slate-500 dark:text-slate-400">Draws oils out via capillary osmosis over 24 hours.</div>
+            <div class="pt-3.5 mt-4 border-t border-slate-200 dark:border-slate-800 space-y-1.5 text-xs w-full text-center shrink-0">
+              <div class="font-bold text-rose-600 dark:text-rose-400 min-h-[2.25rem] flex items-center justify-center leading-tight">Protocol: Chemical Poultice Extraction</div>
+              <div class="text-slate-500 dark:text-slate-400 min-h-[2.25rem] flex items-center justify-center leading-tight">Draws oils out via capillary osmosis over 24 hours.</div>
             </div>
           </div>
 
-          <div class="glass-card gradient-border-card p-6 rounded-2xl space-y-4 hover:-translate-y-1 transition-transform text-center flex flex-col justify-between h-full">
-            <div class="space-y-4 flex flex-col items-center text-center">
-              <div class="w-12 h-12 rounded-xl mx-auto bg-teal-500/10 border border-teal-500/30 text-teal-500 flex items-center justify-center text-xl shadow-sm">
+          <!-- Card 4 -->
+          <div class="glass-card gradient-border-card p-6 rounded-2xl hover:-translate-y-1 transition-transform text-center flex flex-col justify-between h-full">
+            <div class="space-y-4 flex flex-col items-center text-center flex-1 justify-start">
+              <div class="w-12 h-12 rounded-xl mx-auto bg-teal-500/10 border border-teal-500/30 text-teal-500 flex items-center justify-center text-xl shadow-sm shrink-0">
                 <i class="fa-solid fa-stairs"></i>
               </div>
-              <div>
-                <h3 class="font-display font-black text-lg text-slate-900 dark:text-white min-h-[56px] flex items-center justify-center text-center">Tile Lippage & Heights</h3>
-                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 min-h-[50px] text-center">Uneven edges between adjoining stone slabs that stub toes and trap dirt.</p>
+              <div class="w-full">
+                <h3 class="font-display font-black text-lg text-slate-900 dark:text-white min-h-[3.25rem] sm:min-h-[3.5rem] flex items-center justify-center text-center leading-snug">Tile Lippage & Heights</h3>
+                <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 min-h-[4.25rem] sm:min-h-[4.5rem] flex items-center justify-center text-center leading-relaxed">Uneven edges between adjoining stone slabs that stub toes and trap dirt.</p>
               </div>
             </div>
-            <div class="pt-3 border-t border-slate-200 dark:border-slate-800 space-y-1.5 text-xs mt-auto w-full text-center">
-              <div class="font-bold text-teal-600 dark:text-teal-400">Protocol: Planetary Planing Grinding</div>
-              <div class="text-slate-500 dark:text-slate-400">Flattens stone slabs flush into a continuous mirror.</div>
+            <div class="pt-3.5 mt-4 border-t border-slate-200 dark:border-slate-800 space-y-1.5 text-xs w-full text-center shrink-0">
+              <div class="font-bold text-teal-600 dark:text-teal-400 min-h-[2.25rem] flex items-center justify-center leading-tight">Protocol: Planetary Planing Grinding</div>
+              <div class="text-slate-500 dark:text-slate-400 min-h-[2.25rem] flex items-center justify-center leading-tight">Flattens stone slabs flush into a continuous mirror.</div>
             </div>
           </div>
 
@@ -570,7 +564,7 @@
       </div>
     </section>
 
-    <!-- Detailed Section B: Geological Mineral & Mohs Hardness Sensitivity Matrix (6 Stone Types) with Visible Background -->
+        <!-- Detailed Section B: Geological Mineral & Mohs Hardness Sensitivity Matrix (6 Stone Types) with Visible Background -->
     <section class="relative py-24 bg-cover bg-center bg-no-repeat overflow-hidden border-b border-slate-200 dark:border-slate-800" id="stone-matrix-section" style="background-image: url('../assets/images/stone-matrix-bg.jpg');">
       <!-- High-Visibility Adaptive Overlay (40% Light / 65% Dark so marble showroom backdrop is prominently visible) -->
       <div class="matrix-backdrop-overlay"></div>
@@ -1072,14 +1066,9 @@
                 </div>
               </div>
             </div>
-            <div class="px-6 pb-6 pt-2 flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 text-xs">
-              <span class="inline-flex items-center gap-2 text-slate-700 dark:text-slate-200 font-semibold px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700/80 shadow-sm">
-                <i class="fa-solid fa-clock text-amber-500 text-sm"></i>
-                <span>Duration: <strong class="text-slate-900 dark:text-white">2 Days</strong></span>
-              </span>
-              <span class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 font-bold text-xs shadow-sm">
-                <i class="fa-solid fa-shield-halved text-xs"></i> 10-Year Stain Warranty
-              </span>
+            <div class="p-6 pt-0 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs">
+              <span class="text-slate-400"><i class="fa-solid fa-clock text-amber-500 mr-1.5"></i> Duration: 2 Days</span>
+              <span class="text-emerald-500 font-bold"><i class="fa-solid fa-shield-halved mr-1"></i> 10-Year Stain Warranty</span>
             </div>
           </div>
 
@@ -1124,14 +1113,9 @@
                 </div>
               </div>
             </div>
-            <div class="px-6 pb-6 pt-2 flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 text-xs">
-              <span class="inline-flex items-center gap-2 text-slate-700 dark:text-slate-200 font-semibold px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700/80 shadow-sm">
-                <i class="fa-solid fa-clock text-amber-500 text-sm"></i>
-                <span>Duration: <strong class="text-slate-900 dark:text-white">3 Days</strong></span>
-              </span>
-              <span class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-teal-500/10 border border-teal-500/30 text-teal-600 dark:text-teal-400 font-bold text-xs shadow-sm">
-                <i class="fa-solid fa-check-double text-xs"></i> Zero Open Cavities
-              </span>
+            <div class="p-6 pt-0 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs">
+              <span class="text-slate-400"><i class="fa-solid fa-clock text-amber-500 mr-1.5"></i> Duration: 3 Days</span>
+              <span class="text-teal-500 font-bold"><i class="fa-solid fa-check-double mr-1"></i> Zero Open Cavities</span>
             </div>
           </div>
 
@@ -1176,14 +1160,9 @@
                 </div>
               </div>
             </div>
-            <div class="px-6 pb-6 pt-2 flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 text-xs">
-              <span class="inline-flex items-center gap-2 text-slate-700 dark:text-slate-200 font-semibold px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700/80 shadow-sm">
-                <i class="fa-solid fa-moon text-indigo-500 text-sm"></i>
-                <span>Overnight Phasing <strong class="text-slate-900 dark:text-white">(Zero Interruption)</strong></span>
-              </span>
-              <span class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-600 dark:text-cyan-400 font-bold text-xs shadow-sm">
-                <i class="fa-solid fa-wine-glass text-xs"></i> Cocktail Acid Barrier
-              </span>
+            <div class="p-6 pt-0 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs">
+              <span class="text-slate-400"><i class="fa-solid fa-moon text-indigo-500 mr-1.5"></i> Overnight Phasing (Zero Interruption)</span>
+              <span class="text-cyan-500 font-bold"><i class="fa-solid fa-wine-glass mr-1"></i> Cocktail Acid Barrier</span>
             </div>
           </div>
 
@@ -1228,14 +1207,9 @@
                 </div>
               </div>
             </div>
-            <div class="px-6 pb-6 pt-2 flex flex-wrap sm:flex-nowrap items-center justify-between gap-3 text-xs">
-              <span class="inline-flex items-center gap-2 text-slate-700 dark:text-slate-200 font-semibold px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700/80 shadow-sm">
-                <i class="fa-solid fa-temperature-arrow-up text-rose-500 text-sm"></i>
-                <span class="font-bold text-slate-900 dark:text-white">Radiant Floor Compatible</span>
-              </span>
-              <span class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-indigo-500/10 border border-indigo-500/30 text-indigo-600 dark:text-indigo-400 font-bold text-xs shadow-sm">
-                <i class="fa-solid fa-wind text-xs"></i> Breathable Vapor Barrier
-              </span>
+            <div class="p-6 pt-0 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs">
+              <span class="text-slate-400"><i class="fa-solid fa-temperature-arrow-up text-rose-500 mr-1.5"></i> Radiant Floor Compatible</span>
+              <span class="text-indigo-500 font-bold"><i class="fa-solid fa-wind mr-1"></i> Breathable Vapor Barrier</span>
             </div>
           </div>
 
@@ -1384,13 +1358,13 @@
     </section>
 
     <!-- Niche Feature 4: Live Marble & Stone Investment Calculator -->
-    <section class="relative py-24 bg-cover bg-center bg-no-repeat border-t border-slate-200 dark:border-slate-800 overflow-hidden" style="background-image: url('../assets/images/stone-calculator-bg.jpg');">
-      <!-- High-Clarity Ambient Backdrop Overlay -->
-      <div class="absolute inset-0 bg-slate-950/45 dark:bg-slate-950/55 pointer-events-none"></div>
+    <section class="relative py-20 bg-cover bg-center bg-no-repeat border-t border-slate-200 dark:border-slate-800 overflow-hidden" style="background-image: url('https://images.unsplash.com/photo-1613545325278-f24b0cae1224?q=80&w=1920&auto=format&fit=crop');">
+      <!-- Adaptive Dark/Light Backdrop Overlay -->
+      <div class="absolute inset-0 bg-slate-950/80 dark:bg-slate-950/90 backdrop-blur-[2px]"></div>
 
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <div class="glass-card gradient-border-card p-8 sm:p-12 rounded-3xl space-y-8 bg-slate-900/95 dark:bg-slate-900/95 backdrop-blur-xl border border-slate-700/80 shadow-2xl">
+        <div class="glass-card gradient-border-card p-8 sm:p-12 rounded-3xl space-y-8 bg-slate-900/90 border border-slate-700">
           
           <div class="text-center space-y-2">
             <span class="badge bg-amber-500/20 text-amber-500 font-black text-xs uppercase tracking-wider">
